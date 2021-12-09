@@ -121,8 +121,8 @@
                         <h4 class="section-heading text-uppercase">Centres d'intérêt</h4><br>
                         <div class="text-center">
                             <b>Aimez-vous le sport ?</b> <br>
-                            <input type="radio" name="sport" v-model="sport" :value="this.sport"/> Oui <br>
-                            <input type="radio" name="sport" v-model="sport" :value="this.sport"/> Non <br>
+                            <input type="radio" name="sport" v-model="sport" value="Oui"/> Oui <br>
+                            <input type="radio" name="sport" v-model="sport" value="Non"/> Non <br>
                         </div>
                         <br>
                         <div class="text-center">
@@ -133,8 +133,8 @@
                         <br>
                         <div class="text-center">
                             <b>Aimez-vous lire des livres ?</b> <br>
-                            <input type="radio" name="books" v-model="books" :value="this.books"/> Oui<br>
-                            <input type="radio" name="books" v-model="books" :value="this.books"/> Non<br>
+                            <input type="radio" name="books" v-model="books" value="Oui"/> Oui<br>
+                            <input type="radio" name="books" v-model="books" value="Non"/> Non<br>
                         </div>
                         <br>
                         <div class="text-center">
@@ -156,18 +156,20 @@
                             <input type="radio" name="activitypeople" v-model="activitypeople" value="Seul"/> Seul <br>
                             <input type="radio" name="activitypeople" v-model="activitypeople" value="En groupe"/> En groupe <br>
                             <input type="radio" name="activitypeople" v-model="activitypeople" value="Les deux"/> Les deux <br>
+                            <span>Sélectionné(s) : {{ this.activitypeople }}</span>
                         </div>
                         <br>
                         <div class="text-center">
                             <b>Aimez-vous cuisiner ?</b> <br>
-                            <input type="radio" name="cooking" :value="this.cooking" v-model="cooking" /> Oui <br>
-                            <input type="radio" name="cooking" :value="this.cooking" v-model="cooking" /> Non <br>
+                            <input type="radio" name="cooking" value="Oui" v-model="cooking" /> Oui <br>
+                            <input type="radio" name="cooking" value="Non" v-model="cooking" /> Non <br>
+                            
                         </div>
                         <br>
                         <div class="text-center">
                             <b>Aimez-vous les activités manuelles (peinture, couture, bricolages, DIY, etc.) ?</b> <br>
-                            <input type="radio" name="handicrafts" v-model="handicrafts" :value="this.handicrafts"/> Oui <br>
-                            <input type="radio" name="handicrafts" v-model="handicrafts" :value="this.handicrafts" /> Non <br>
+                            <input type="radio" name="handicrafts" v-model="handicrafts" value="Oui"/> Oui <br>
+                            <input type="radio" name="handicrafts" v-model="handicrafts" value="Non"/> Non <br>
                         </div>
                     </div>
                 </div>
@@ -434,7 +436,7 @@ export default {
 
     axios.get('http://localhost:5000/personnalityquest', { headers: { token: localStorage.getItem('token')}})
       .then(res => {
-        this.emailUser = res.data.user.emailUser;
+        this.emailUser = res.data.personnalityquest.emailUser;
         this.personnality = res.data.personnalityquest.personnality;
         this.outings = res.data.personnalityquest.outings;
         this.hobbies = res.data.personnalityquest.hobbies;
@@ -474,6 +476,7 @@ export default {
       axios.post('http://localhost:5000/userprofile', newPersonnalityQuest)
         .then(res => {
           this.error = '';
+          localStorage.setItem('token', res.data.token);
           this.$router.push('/userprofile');
         }, err => {
           console.log(err.response)
@@ -486,12 +489,6 @@ export default {
     },
 
     update() {
-    },
-
-    getradio(){
-        if(v-models=='Oui'){
-            checked=true;
-        }
     }
 
   }

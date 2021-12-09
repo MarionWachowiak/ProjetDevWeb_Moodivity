@@ -56,7 +56,7 @@ app.post('/login', (req, res, next) => {
       })
     }
     //IF ALL IS GOOD create a token and send to frontend
-    let token = jwt.sign({ userId: user._id}, 'secretkey');
+    let token = jwt.sign({ userId: user._id, userE: user.email}, 'secretkey');
     return res.status(200).json({
       title: 'login sucess',
       token: token
@@ -84,7 +84,7 @@ app.post('/userprofile', (req, res, next) => {
     if (err) {
       return res.status(400).json({
         title: 'error',
-        error: 'personnality quest not saved'
+        error: 'Questionnaire de personnalité non sauvegardé !'
       })
     }
     return res.status(200).json({
@@ -118,6 +118,7 @@ app.get('/user', (req, res, next) => {
   })
 })
 
+
 //grabbing user personnality quest
 app.get('/personnalityquest', (req, res, next) => {
   let token = req.headers.token; //token
@@ -127,7 +128,7 @@ app.get('/personnalityquest', (req, res, next) => {
     })
 
     //token is valid
-    PersonnalityQuest.findOne({ emailUser: 'mwachowiak@univ-angers.fr' }, (err, personnalityquest) => {
+    PersonnalityQuest.findOne({ emailUser : decoded.userE}, (err, personnalityquest) => {
       if (err) return console.log(err)
       return res.status(200).json({
         title: 'personnality quest grabbed',
@@ -148,8 +149,6 @@ app.get('/personnalityquest', (req, res, next) => {
         }
       })
     })
-
-
 
   })
 })
