@@ -6,6 +6,7 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const User = require('./models/User');
 const PersonnalityQuest = require('./models/PersonnalityQuest');
+const req = require('express/lib/request');
 
 mongoose.connect('mongodb://localhost/moodivity');
 
@@ -14,8 +15,11 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//routes
+
+// ROUTES
+
 app.post('/signup', (req, res, next) => {
+  // Création du nouvel utilisateur
   const newUser = new User({
     name: req.body.name,
     birthdate: req.body.birthdate,
@@ -35,6 +39,7 @@ app.post('/signup', (req, res, next) => {
     })
   })
 })
+
 
 app.post('/login', (req, res, next) => {
   User.findOne({ email: req.body.email }, (err, user) => {
@@ -64,7 +69,7 @@ app.post('/login', (req, res, next) => {
   })
 })
 
-app.post('/userprofile', (req, res, next) => {
+app.post('/createpersonnalityquest', (req, res, next) => {
   const newPersonnalityQuest = new PersonnalityQuest({
     emailUser: req.body.emailUser,
     personnality: req.body.personnality,
@@ -84,7 +89,7 @@ app.post('/userprofile', (req, res, next) => {
     if (err) {
       return res.status(400).json({
         title: 'error',
-        error: 'Questionnaire de personnalité non sauvegardé !'
+        error: 'Erreur'
       })
     }
     return res.status(200).json({
@@ -92,6 +97,35 @@ app.post('/userprofile', (req, res, next) => {
       success: 'Questionnaire de personnalité enregistré !'
     })
   })
+})
+
+// Update user profile
+app.put('/updatepersonnalityquest', (req, res, next) => {
+  var myquery = { emailUser: req.body.emailUser };
+  console.log(myquery)
+  var newvalues = { $set: {
+    personnality: req.body.personnality,
+    outings: req.body.outings,
+    hobbies: req.body.hobbies,
+    interests: req.body.interests,
+    sport: req.body.sport,
+    cinemaseries: req.body.cinemaseries,
+    books: req.body.books,
+    museum: req.body.museum,
+    activityplace: req.body.activityplace,
+    activitypeople: req.body.activitypeople,
+    cooking: req.body.cooking,
+    handicrafts: req.body.handicrafts } };
+  PersonnalityQuest.updateOne(myquery, newvalues, function(err, res) {
+  })
+  .then(res => {
+    return res.status(200).json({
+      title: 'MAJ effectuée !'
+    })
+  })
+  .catch(err => {
+      return res.status(500).json(err.message);
+  });
 })
 
 //grabbing user info
@@ -127,28 +161,32 @@ app.get('/personnalityquest', (req, res, next) => {
       title: 'unauthorized'
     })
 
-    //token is valid
-    PersonnalityQuest.findOne({ emailUser : decoded.userE}, (err, personnalityquest) => {
-      if (err) return console.log(err)
-      return res.status(200).json({
-        title: 'personnality quest grabbed',
-        personnalityquest: {
-          emailUser: personnalityquest.emailUser,
-          personnality: personnalityquest.personnality,
-          outings: personnalityquest.outings,
-          hobbies: personnalityquest.hobbies,
-          interests: personnalityquest.interests,
-          sport: personnalityquest.sport,
-          cinemaseries: personnalityquest.cinemaseries,
-          books: personnalityquest.books,
-          museum: personnalityquest.museum,
-          activityplace: personnalityquest.activityplace,
-          activitypeople: personnalityquest.activitypeople,
-          cooking: personnalityquest.cooking,
-          handicrafts: personnalityquest.handicrafts,
-        }
+    if(decoded.userE!=null)
+    {
+      //token is valid
+      PersonnalityQuest.findOne({ emailUser : decoded.userE}, (err, personnalityquest) => {
+        if (err) return console.log(err)
+        return res.status(200).json({
+          title: 'personnality quest grabbed',
+          personnalityquest: {
+            emailUser: personnalityquest.emailUser,
+            personnality: personnalityquest.personnality,
+            outings: personnalityquest.outings,
+            hobbies: personnalityquest.hobbies,
+            interests: personnalityquest.interests,
+            sport: personnalityquest.sport,
+            cinemaseries: personnalityquest.cinemaseries,
+            books: personnalityquest.books,
+            museum: personnalityquest.museum,
+            activityplace: personnalityquest.activityplace,
+            activitypeople: personnalityquest.activitypeople,
+            cooking: personnalityquest.cooking,
+            handicrafts: personnalityquest.handicrafts,
+          }
+        })
       })
-    })
+    }
+    
 
   })
 })

@@ -417,6 +417,7 @@ export default {
         handicrafts: '',
 
         error: '',
+        success: '',
     }
   },
   created() {
@@ -473,9 +474,10 @@ export default {
         cooking: this.cooking,
         handicrafts: this.handicrafts,
       }
-      axios.post('http://localhost:5000/userprofile', newPersonnalityQuest)
+      axios.put('http://localhost:5000/updatepersonnalityquest', newPersonnalityQuest)
         .then(res => {
           this.error = '';
+          this.success = '';
           localStorage.setItem('token', res.data.token);
           this.$router.push('/userprofile');
         }, err => {

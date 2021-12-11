@@ -81,6 +81,19 @@ export default {
       password: '',
       city: '',
       birthdate: '',
+      emailUser: '',
+      personnality: '',
+      outings: '',
+      hobbies: '',
+      interests: '',
+      sport: '',
+      cinemaseries: '',
+      books: '',
+      museum: '',
+      activityplace: '',
+      activitypeople: '',
+      cooking: '',
+      handicrafts: '',
 
       error: '',
     }
@@ -97,14 +110,37 @@ export default {
       axios.post('http://localhost:5000/signup', newUser)
         .then(res => {
           this.error = '';
+          let newPersonnalityQuest = {
+            emailUser: this.email,
+            personnality: '',
+            outings: '',
+            hobbies: '',
+            interests: '',
+            sport: '',
+            cinemaseries: '',
+            books: '',
+            museum: '',
+            activityplace: '',
+            activitypeople: '',
+            cooking: '',
+            handicrafts: '',
+          }
+          axios.post('http://localhost:5000/createpersonnalityquest', newPersonnalityQuest)
+            .then(res => {
+              this.error = '';
+              this.$router.push('/login');
+            }, err => {
+              console.log(err.response)
+              this.error = err.response.data.error
+            })
           this.$router.push('/login');
         }, err => {
           console.log(err.response)
           this.error = err.response.data.error
         })
+      
+      
     }
   }
 }
 </script>
-
-
