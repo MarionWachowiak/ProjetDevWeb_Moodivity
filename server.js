@@ -31,7 +31,7 @@ app.post('/signup', (req, res, next) => {
     if (err) {
       return res.status(400).json({
         title: 'error',
-        error: 'email in use'
+        error: 'Adresse email déjà utilisée'
       })
     }
     return res.status(200).json({
@@ -115,17 +115,16 @@ app.put('/updatepersonnalityquest', (req, res, next) => {
     activityplace: req.body.activityplace,
     activitypeople: req.body.activitypeople,
     cooking: req.body.cooking,
-    handicrafts: req.body.handicrafts } };
-  PersonnalityQuest.updateOne(myquery, newvalues, function(err, res) {
+    handicrafts: req.body.handicrafts } 
+  };
+  PersonnalityQuest.updateOne(myquery, newvalues, (err, res, next) => {
+    if (err) {
+      return res
+          .status(404)
+          .send({error2: "unsuccessful"})
+    };
+    res.json({success: "success"});
   })
-  .then(res => {
-    return res.status(200).json({
-      title: 'MAJ effectuée !'
-    })
-  })
-  .catch(err => {
-      return res.status(500).json(err.message);
-  });
 })
 
 //grabbing user info

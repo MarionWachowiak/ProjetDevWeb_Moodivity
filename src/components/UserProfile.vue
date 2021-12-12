@@ -156,7 +156,6 @@
                             <input type="radio" name="activitypeople" v-model="activitypeople" value="Seul"/> Seul <br>
                             <input type="radio" name="activitypeople" v-model="activitypeople" value="En groupe"/> En groupe <br>
                             <input type="radio" name="activitypeople" v-model="activitypeople" value="Les deux"/> Les deux <br>
-                            <span>Sélectionné(s) : {{ this.activitypeople }}</span>
                         </div>
                         <br>
                         <div class="text-center">
@@ -178,10 +177,13 @@
 
             
             <!-- Submit Button-->
-            <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="validatepersonnality">Valider</button></div>
-            {{ error }}
-            {{ success }}
-            <br>
+            <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="validatepersonnality">Valider</button>
+                <br><br>
+                <div>{{ error2 }}</div>
+                <div>{{ success }}</div>
+                <br>
+            </div>
+            
         </div>
 
     </section>
@@ -417,6 +419,7 @@ export default {
         handicrafts: '',
 
         error: '',
+        error2: '',
         success: '',
     }
   },
@@ -476,13 +479,13 @@ export default {
       }
       axios.put('http://localhost:5000/updatepersonnalityquest', newPersonnalityQuest)
         .then(res => {
-          this.error = '';
+          this.error2 = '';
           this.success = '';
           localStorage.setItem('token', res.data.token);
           this.$router.push('/userprofile');
         }, err => {
           console.log(err.response)
-          this.error = err.response.data.error
+          this.error2 = err.response.data.error2
         })
     },
     
@@ -496,4 +499,3 @@ export default {
   }
 }
 </script>
-
