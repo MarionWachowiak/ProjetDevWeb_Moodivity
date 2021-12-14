@@ -40,3 +40,7 @@ npm run serve
 npm run build
 ```
 
+### To run the server (located in repository where the file is)
+```
+node server.js
+```
