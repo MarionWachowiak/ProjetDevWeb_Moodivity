@@ -8,3 +8,4 @@
 # Sources for content : 
 - Architecture of the project : https://www.djamware.com/post/5a1b779f80aca75eadc12d6e/mongo-express-vue-nodejs-mevn-stack-crud-web-application
 - Authentification system : https://github.com/selfcodinglab/vue-auth
+- Fenêtres pop-up et humeurs : https://www.developpez.net/forums/d172136/javascript/general-javascript/compter-nombre-checkbox-coche/

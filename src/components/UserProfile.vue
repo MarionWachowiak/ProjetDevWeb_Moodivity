@@ -203,7 +203,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Joyeux</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="joyeux"/>
                         </div>
                     </div>
                 </li>
@@ -212,7 +212,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Triste</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="triste" />
                         </div>
                     </div>
                 </li>
@@ -223,7 +223,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Calme</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="calme" />
                         </div>
                     </div>
                 </li>
@@ -232,7 +232,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">En colère</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="colere" />
                         </div>
                     </div>
                 </li>
@@ -243,7 +243,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Energique</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="energique" />
                         </div>
                     </div>
                 </li>
@@ -252,7 +252,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Fatigué(e)</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="fatigue" />
                         </div>
                     </div>
                 </li>
@@ -261,7 +261,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Stréssée(e)</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="stresse" />
                             
                         </div>
                     </div>
@@ -271,7 +271,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Détendu(e)</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="detendu" />
                         </div>
                     </div>
                 </li>
@@ -280,7 +280,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Optimiste</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="optimiste" />
                             
                         </div>
                     </div>
@@ -290,7 +290,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Sérieux(se)</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="serieux" />
                         </div>
                     </div>
                 </li>
@@ -299,7 +299,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Seul(e)</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="seul" />
                             
                         </div>
                     </div>
@@ -309,7 +309,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Grincheux(se)</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="grincheux" />
                         </div>
                     </div>
                 </li>
@@ -318,7 +318,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Distrait(e)</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="distrait" />
                             
                         </div>
                     </div>
@@ -328,13 +328,14 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Anxieux(e)</h4>
-                            <input type="checkbox" id="reponse" name="reponse" />
+                            <input type="checkbox" name="mood" value="anxieux" />
                         </div>
                     </div>
                 </li>
                 <br>
             </ul>
             <div class="text-center"><a class="btn btn-primary btn-xl text-uppercase" @click="validatemood">Valider mon humeur</a></div>
+            <p id="enClair"></p>
         </div>
     </section>
     <!-- Vos activités favorites -->
@@ -490,7 +491,25 @@ export default {
     },
     
     validatemood() {
-      this.$router.push('/useractivities');
+        var dbRes = [];
+        var nbre_check = 0;
+        var dbEl = document.getElementsByName("mood");
+        for (var i=0; i<dbEl.length; i++) {
+            if (dbEl[i].checked==true) 
+            {
+                dbRes.push(dbEl[i].value);
+                nbre_check ++ ;
+            }	
+        }
+        if(dbRes.length > 3){
+            alert("Vous ne pouvez cocher que 3 humeurs maximum !")
+        }
+        else {
+            this.$router.push('/useractivities');
+        }
+        //alert("Les humeurs sont : " + dbRes);
+        //alert(nbre_check + " humeurs ont étées cochées");
+ 
     },
 
     update() {
