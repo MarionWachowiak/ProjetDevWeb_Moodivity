@@ -419,6 +419,8 @@ export default {
         cooking: '',
         handicrafts: '',
 
+        moods: '',
+
         error: '',
         error2: '',
         success: '',
@@ -505,7 +507,14 @@ export default {
             alert("Vous ne pouvez cocher que 3 humeurs maximum !")
         }
         else {
-            this.$router.push('/useractivities');
+            if(dbRes.length == 0){
+                alert("Vous devez cocher au minimum 1 humeur !")
+            }
+            if(dbRes.length > 0){
+                this.moods = dbRes;
+                this.$router.push('/useractivities');
+            }
+            
         }
         //alert("Les humeurs sont : " + dbRes);
         //alert(nbre_check + " humeurs ont étées cochées");

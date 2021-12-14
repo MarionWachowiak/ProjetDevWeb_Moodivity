@@ -11,9 +11,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#questionnaire">Questionnaire de personnalité</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#humeur">Humeur du jour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#activitesproposees">Activités proposées</a></li>
                     <li class="nav-item"><a class="nav-link" href="" @click="logout">Se déconnecter</a></li>
                 </ul>
             </div>
@@ -23,9 +21,11 @@
     <!-- Masthead-->
     <header class="masthead">
         <div class="container">
-            <div class="masthead-subheading">Bienvenue</div>
-            <div class="masthead-heading text-uppercase">{{ name }} !</div>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#humeur">Que faire aujourd'hui ?</a>
+            <div class="masthead-heading">{{ name }},  </div>
+            <div class="masthead-subheading text-uppercase">cliquez pour découvrir ce que nous vous proposons aujourd'hui !</div>
+            <br>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#humeur">Mes activités</a>
+            <div>{{ moods }}</div>
         </div>
     </header>
 
@@ -92,6 +92,7 @@ export default {
     return {
       name: '',
       email: '',
+      moods: '',
     }
   },
   created() {
