@@ -7,6 +7,7 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import HomePage from './components/HomePage';
 
+
 Vue.use(VueRouter); //IMPORTANT
 
 
@@ -27,6 +28,9 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
+  data: {
+    showModal: false
+  },
   render: h => {
     return h(App)
   }

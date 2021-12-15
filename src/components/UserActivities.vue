@@ -11,7 +11,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#activitesproposees">Activités proposées</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Activités proposées</a></li>
+                    <li class="nav-item"><a class="nav-link" href="" @click="returnprofile">Mon profil</a></li>
                     <li class="nav-item"><a class="nav-link" href="" @click="logout">Se déconnecter</a></li>
                 </ul>
             </div>
@@ -22,13 +23,64 @@
     <header class="masthead">
         <div class="container">
             <div class="masthead-heading">{{ name }},  </div>
-            <div class="masthead-subheading text-uppercase">cliquez pour découvrir ce que nous vous proposons aujourd'hui !</div>
-            <br>
-            <a class="btn btn-primary btn-xl text-uppercase" href="#humeur">Mes activités</a>
+            <div class="masthead-subheading text-uppercase">Découvrez les activités que nous avons sélectionnées pour vous !</div>
             <div>{{ moods }}</div>
         </div>
     </header>
 
+    <!-- Activités proposées -->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Voici les activités que nous vous proposons :</h2>
+                <h3 class="section-subheading text-muted"></h3>
+                <br>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->  
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/escalade.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Escalade</div>
+                            <div class="portfolio-caption-subheading text-muted">Venez vous challenger grâce à ce sport où se mélangent technique et condition physique !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/marchenoel.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Marché de Noël</div>
+                            <div class="portfolio-caption-subheading text-muted">Organisé par la ville d'Angers, ce marché ravira petits et grands !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/cinema.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Cinéma</div>
+                            <div class="portfolio-caption-subheading text-muted">Film Kaamelot, actuellement en salle !</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                <h2 class="section-heading text-uppercase"></h2>
+                <h3 class="section-subheading text-muted">ENJOY !</h3>
+            </div>
+            </div>
+        </div>
+    </section>
     
     <!-- Footer-->
     <footer class="footer py-4">
@@ -40,42 +92,6 @@
             </div>
         </div>
     </footer>
-    <!-- Portfolio Modals-->
-    <!-- Portfolio item 1 modal popup-->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="close-modal" data-bs-dismiss="modal"><img src="../assets/img/close-icon.svg" alt="Close modal" /></div>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                            <div class="modal-body">
-                                <!-- Project details-->
-                                <h2 class="text-uppercase">Escalade</h2>
-                                <p class="item-intro text-muted">Sport à pratiquer en intérieur au suaps en lien avec l'université d'Angers.</p>
-                                <img class="img-fluid d-block mx-auto" src="../assets/img/activites/1.jpg" alt="..." />
-                                <p>Ce sport complet permet de gagner en force, souplesse, endurance. Des créneaux sont disponibles tout au long de la semaine !</p>
-                                <ul class="list-inline">
-                                    <li>
-                                        <strong>Catégorie :</strong>
-                                        Sport
-                                    </li>
-                                    <li>
-                                        <strong>Nombre de personnes nécessaires :</strong>
-                                        2 ou plus
-                                    </li>
-                                </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                    <i class="fas fa-times me-1"></i>
-                                    Fermer
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <br><br>
    
   </body>
@@ -119,4 +135,3 @@ export default {
   }
 }
 </script>
-
