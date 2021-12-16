@@ -185,10 +185,28 @@ app.get('/personnalityquest', (req, res, next) => {
         })
       })
     }
-    
-
   })
 })
+
+//grabbing activities info
+app.get('/activities', (req, res, next) => {
+    //token is valid
+    Activity.findOne({ place: "Intérieur" }, (err, activity) => {
+      if (err) return console.log(err)
+      return res.status(200).json({
+        title: 'activity grabbed',
+        activity: {
+          nameActivity: activity.name,
+          type: activity.type,
+          numberPeople: activity.numberPeople,
+          cityActivity: activity.city,
+          place: activity.place,
+          moodActivity: activity.mood,
+        }
+      })
+    })
+
+  })
 
 //Port
 const port = process.env.PORT || 5000;

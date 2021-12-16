@@ -109,6 +109,12 @@ export default {
       name: '',
       email: '',
       moods: '',
+
+      nameActivity: '',
+      type: '',
+      place: '',
+      city: '',
+      moodActivity: ''
     }
   },
   created() {
@@ -122,6 +128,15 @@ export default {
       .then(res => {
         this.name = res.data.user.name;
         this.email = res.data.user.email;
+      }),
+
+    axios.get('http://localhost:5000/activities', { headers: { token: localStorage.getItem('token')}})
+      .then(res => {
+        this.nameActivity = res.data.user.name;
+        this.type = res.data.user.type;
+        this.place = res.data.user.place;
+        this.city = res.data.user.city;
+        this.moodActivity = res.data.user.mood;
       })
   },
   methods: {

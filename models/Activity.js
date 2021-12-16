@@ -8,10 +8,6 @@ const activitySchema = new Schema({
   place: String,
   city: String,
   mood: String,
-  email: {
-    unique: true,
-    type: String
-  },
 })
 
 const Activity = mongoose.model('Activity', activitySchema);
