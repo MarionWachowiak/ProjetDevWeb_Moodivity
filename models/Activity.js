@@ -8,6 +8,7 @@ const activitySchema = new Schema({
   place: String,
   city: String,
   mood: String,
+  description: String,
 })
 
 const Activity = mongoose.model('Activity', activitySchema);

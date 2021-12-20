@@ -76,7 +76,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Questionnaire de personnalité</h2>
-                <h3 class="section-subheading text-muted">Ces quelques questions ont pour but de mieux vous connaître {{ name }}</h3>
+                <h3 class="section-subheading text-muted">Ces quelques questions ont pour but de mieux vous connaître, {{ name }}. <br><br> Vous pouvez d'ailleurs modifier vos réponses à tout moment !</h3>
             </div>
             <div class="rowa">
                 <div class="form-group">
@@ -177,7 +177,7 @@
 
             
             <!-- Submit Button-->
-            <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="validatepersonnality">Valider</button>
+            <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="validatepersonnality">Enregistrer mes réponses</button>
                 <br><br>
                 <div>{{ error2 }}</div>
                 <div>{{ success }}</div>
@@ -193,7 +193,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Quelle est votre humeur du jour ?</h2>
-                <h3 class="section-subheading text-muted">Vous pouvez cocher jusqu'à 3 humeurs différentes :</h3>
+                <h3 class="section-subheading text-muted">Vous pouvez cocher jusqu'à 3 humeurs différentes parmi les suivantes :</h3>
             </div>
             <ul class="timeline">
                 <li>

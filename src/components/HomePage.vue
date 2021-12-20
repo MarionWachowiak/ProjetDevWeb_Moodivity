@@ -172,6 +172,78 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 10-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
+                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 11-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
+                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 12-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
+                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 13-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
+                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 14-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
+                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 15-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
+                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -201,6 +201,7 @@ app.get('/activities', (req, res, next) => {
           numberPeople: activity.numberPeople,
           cityActivity: activity.city,
           place: activity.place,
+          description: activity.description,
           moodActivity: activity.mood,
         }
       })
