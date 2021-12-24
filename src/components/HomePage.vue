@@ -71,8 +71,8 @@
                             <img class="img-fluid" src="../assets/img/activites/escalade.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Escalade</div>
-                            <div class="portfolio-caption-subheading text-muted">Venez vous challenger grâce à ce sport où se mélangent technique et condition physique !</div>
+                            <div class="portfolio-caption-heading">{{ nameActivity }}</div>
+                            <div class="portfolio-caption-subheading text-muted">{{ description }}</div>
                         </div>
                     </div>
                 </div>
@@ -364,3 +364,35 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Core theme JS-->
 <script src="../js/scripts.js"></script>
+
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'HomePage',
+  data() {
+    return {
+      nameActivity: '',
+      type: '',
+      place: '',
+      city: '',
+      moodActivity: '',
+      description: '',
+      image: '',
+    }
+  },
+  mounted() {
+    axios.get('http://localhost:5000/activities', { headers: { token: localStorage.getItem('token')}})
+      .then(res => {
+        this.nameActivity = res.data.activity.nameActivity;
+        this.type = res.data.activity.type;
+        this.place = res.data.activity.place;
+        this.city = res.data.activity.city;
+        this.description = res.data.activity.description;
+        this.moodActivity = res.data.activity.mood;
+        this.image = res.data.activity.image;
+      })
+
+  }
+}
+</script>

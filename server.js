@@ -6,6 +6,7 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const User = require('./models/User');
 const PersonnalityQuest = require('./models/PersonnalityQuest');
+const Activity = require('./models/Activity')
 const req = require('express/lib/request');
 
 mongoose.connect('mongodb://localhost/moodivity');
@@ -147,7 +148,6 @@ app.get('/user', (req, res, next) => {
         }
       })
     })
-
   })
 })
 
@@ -191,22 +191,22 @@ app.get('/personnalityquest', (req, res, next) => {
 //grabbing activities info
 app.get('/activities', (req, res, next) => {
     //token is valid
-    Activity.findOne({ place: "Intérieur" }, (err, activity) => {
+    Activity.findOne({ nameActivity: "Escalade" }, (err, activity) => {
       if (err) return console.log(err)
       return res.status(200).json({
         title: 'activity grabbed',
         activity: {
-          nameActivity: activity.name,
+          nameActivity: activity.nameActivity,
           type: activity.type,
-          numberPeople: activity.numberPeople,
+          peopleNumber: activity.peopleNumber,
           cityActivity: activity.city,
           place: activity.place,
           description: activity.description,
           moodActivity: activity.mood,
+          image: activity.image,
         }
       })
     })
-
   })
 
 //Port

@@ -68,8 +68,8 @@
                             <img class="img-fluid" src="../assets/img/activites/cinema.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">{{ activity.name }}</div>
-                            <div class="portfolio-caption-subheading text-muted">{{ activity.description }}</div>
+                            <div class="portfolio-caption-heading">{{ nameActivity }}</div>
+                            <div class="portfolio-caption-subheading text-muted">{{ description }}</div>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,8 @@ export default {
       type: '',
       place: '',
       city: '',
-      moodActivity: ''
+      moodActivity: '',
+      description: '',
     }
   },
   created() {
@@ -132,13 +133,14 @@ export default {
 
     axios.get('http://localhost:5000/activities', { headers: { token: localStorage.getItem('token')}})
       .then(res => {
-        this.nameActivity = res.data.activity.name;
+        this.nameActivity = res.data.activity.nameActivity;
         this.type = res.data.activity.type;
         this.place = res.data.activity.place;
         this.city = res.data.activity.city;
         this.description = res.data.activity.description;
         this.moodActivity = res.data.activity.mood;
       })
+
   },
   methods: {
     logout() {

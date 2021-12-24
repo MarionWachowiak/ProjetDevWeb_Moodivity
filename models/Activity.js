@@ -2,13 +2,14 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const activitySchema = new Schema({
-  name: String,
+  nameActivity: String,
   type: String,
-  peopleNeeded: Number,
+  peopleNumber: Number,
   place: String,
   city: String,
   mood: String,
   description: String,
+  image: String,
 })
 
 const Activity = mongoose.model('Activity', activitySchema);
