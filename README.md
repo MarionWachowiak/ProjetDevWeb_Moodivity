@@ -44,3 +44,12 @@ npm run build
 ```
 node server.js
 ```
+  
+
+### Reste à faire
+- Liens entre les humeurs et les activités  
+- Historisation des activités proposées à chaque utilisateur  
+- Remplissage de la base de données : activités  
+- Finitions de la page useractivities
+- Finitions de la homepage (catalogue d'activités à finir)
+
