@@ -58,7 +58,7 @@
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Les activités</h2>
+                <h2 class="section-heading text-uppercase">Le catalogue d'activités</h2>
                 <h3 class="section-subheading text-muted">Voici les activités du moment !</h3>
             </div>
             <div class="row">
@@ -176,11 +176,11 @@
                     <!-- Portfolio item 10-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/jardinage.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
-                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                            <div class="portfolio-caption-heading">Jardinage</div>
+                            <div class="portfolio-caption-subheading text-muted">Prenez le temps de prendre soin de vos plantes ou d'en cultiver de nouvelles !</div>
                         </div>
                     </div>
                 </div>
@@ -188,11 +188,11 @@
                     <!-- Portfolio item 11-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/natation.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
-                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                            <div class="portfolio-caption-heading">Natation</div>
+                            <div class="portfolio-caption-subheading text-muted">Allez vous dépenser à la piscine en pratiquant ce sport complet !</div>
                         </div>
                     </div>
                 </div>
@@ -200,11 +200,11 @@
                     <!-- Portfolio item 12-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/bowling.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
-                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                            <div class="portfolio-caption-heading">Bowling</div>
+                            <div class="portfolio-caption-subheading text-muted">Appelez deux ou trois amis et allez faire quelques parties !</div>
                         </div>
                     </div>
                 </div>
@@ -212,11 +212,11 @@
                     <!-- Portfolio item 13-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/meditation.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
-                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                            <div class="portfolio-caption-heading">Méditation</div>
+                            <div class="portfolio-caption-subheading text-muted">Asseyez-vous et détendez-vous en écoutant les bruits autour de vous.</div>
                         </div>
                     </div>
                 </div>
@@ -224,11 +224,11 @@
                     <!-- Portfolio item 14-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/jeuvideo.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
-                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                            <div class="portfolio-caption-heading">Jouer à un jeu vidéo</div>
+                            <div class="portfolio-caption-subheading text-muted">Dégainez vos manettes et divertissez-vous en jouant à votre jeu préféré !</div>
                         </div>
                     </div>
                 </div>
@@ -236,11 +236,191 @@
                     <!-- Portfolio item 15-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/lecture.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
-                            <div class="portfolio-caption-subheading text-muted">Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !</div>
+                            <div class="portfolio-caption-heading">Lecture</div>
+                            <div class="portfolio-caption-subheading text-muted">Préparez-vous une boisson chaude et installez-vous confortablement avec le livre de votre choix !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 16-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/chant.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Prendre un cours de chant</div>
+                            <div class="portfolio-caption-subheading text-muted">Vous revez d'apprendre à chanter juste ? C'est le moment !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 17-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/dessin.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Dessin</div>
+                            <div class="portfolio-caption-subheading text-muted">Asseyez-vous, sortez du papier et quelques crayons et c'est parti !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 18-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/benevolat.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Faire du bénévolat</div>
+                            <div class="portfolio-caption-subheading text-muted">Vous souhaitez offrir de votre temps à d'autres personnes ? Faites du bénévolat !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 19-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/film.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Film + popcorn</div>
+                            <div class="portfolio-caption-subheading text-muted">Regardez le film de votre choix accompagné de popcorn !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 20-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/cuisine.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Cuisiner des repas</div>
+                            <div class="portfolio-caption-subheading text-muted">Préparez vos repas pour les prochains jours et gagnez du temps !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 21-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/parcattractions.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Parc d'attractions</div>
+                            <div class="portfolio-caption-subheading text-muted">Prévoyez la journée entière et amusez-vous !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 22-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/volley.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Volley</div>
+                            <div class="portfolio-caption-subheading text-muted">Répartissez vous en deux équipes et que la meilleure gagne !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 23-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/festival.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Festival</div>
+                            <div class="portfolio-caption-subheading text-muted">Renseignez-vous sur les festivals de la région et foncez !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 24-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/soiree.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Organiser une soirée</div>
+                            <div class="portfolio-caption-subheading text-muted">Réfléchissez à la prochaine soirée que vous pouvez organiser avec vos amis !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 25-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/proche.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Voir un proche</div>
+                            <div class="portfolio-caption-subheading text-muted">Allez voir un proche que vous n'avez pas vu depuis un moment !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 26-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/course.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Course à pieds</div>
+                            <div class="portfolio-caption-subheading text-muted">Chaussez votre paire de baskets et donnez-vous à fond !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 27-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/vacances.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Organiser ses prochaines vacances</div>
+                            <div class="portfolio-caption-subheading text-muted">Choississez le lieu de vos prochaines vacances et prévoyez ce que vous souhaitez découvrir et visiter !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 28-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/rangement.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Ranger son logement</div>
+                            <div class="portfolio-caption-subheading text-muted">Votre logement est rempli d'affaires éparpillées dans tous les coins ? Il est peut-être temps de faire du rangement !</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 29-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/recette.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Tester une nouvelle recette</div>
+                            <div class="portfolio-caption-subheading text-muted">Cherchez une nouvelle recette et testez-la (vous nous en direz des nouvelles !)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 30-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/parc.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Se promener dans un parc</div>
+                            <div class="portfolio-caption-subheading text-muted">Balladez-vous et profitez de la nature dans un parc.</div>
                         </div>
                     </div>
                 </div>
