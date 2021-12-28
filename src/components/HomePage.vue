@@ -63,12 +63,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    
                     <!-- Portfolio item 1-->
-                    
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/escalade.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/escalade.png" alt="Escalade" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">{{ nameActivity }}</div>
@@ -80,7 +78,7 @@
                     <!-- Portfolio item 2-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/marchenoel.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/marchenoel.png" alt="Marché de Noël" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Marché de Noël</div>
@@ -92,7 +90,7 @@
                     <!-- Portfolio item 3-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/cinema.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/cinema.png" alt="Cinéma" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Cinéma</div>
@@ -104,7 +102,7 @@
                     <!-- Portfolio item 4-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/randonnee.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/randonnee.png" alt="Randonnée" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Randonnée</div>
@@ -116,7 +114,7 @@
                     <!-- Portfolio item 5-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/patinoire.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/patinoire.png" alt="Patiner" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Patinage artistique</div>
@@ -128,7 +126,7 @@
                     <!-- Portfolio item 6-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/chateau.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/chateau.png" alt="Château d'Angers" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Visite du château d'Angers</div>
@@ -140,7 +138,7 @@
                     <!-- Portfolio item 7-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/patisserie.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/patisserie.png" alt="Pâtisserie" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Atelier pâtisserie</div>
@@ -152,7 +150,7 @@
                     <!-- Portfolio item 8-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/diy.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/diy.png" alt="Bricolage DIY" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Bricolage DIY</div>
@@ -164,7 +162,7 @@
                     <!-- Portfolio item 9-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/jeuxdesociete.png" alt="Jeux de société" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Soirée jeux de sociétés</div>
@@ -176,7 +174,7 @@
                     <!-- Portfolio item 10-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/jardinage.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/jardinage.png" alt="Jardiner" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Jardinage</div>
@@ -188,7 +186,7 @@
                     <!-- Portfolio item 11-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/natation.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/natation.png" alt="Natation" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Natation</div>
@@ -200,7 +198,7 @@
                     <!-- Portfolio item 12-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/bowling.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/bowling.png" alt="Bowling" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Bowling</div>
@@ -212,7 +210,7 @@
                     <!-- Portfolio item 13-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/meditation.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/meditation.png" alt="Méditer" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Méditation</div>
@@ -224,7 +222,7 @@
                     <!-- Portfolio item 14-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/jeuvideo.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/jeuvideo.png" alt="Jeux vidéos" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Jouer à un jeu vidéo</div>
@@ -236,7 +234,7 @@
                     <!-- Portfolio item 15-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/lecture.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/lecture.png" alt="Lire" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Lecture</div>
@@ -248,7 +246,7 @@
                     <!-- Portfolio item 16-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/chant.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/chant.png" alt="Cours de chant" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Prendre un cours de chant</div>
@@ -260,10 +258,10 @@
                     <!-- Portfolio item 17-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/dessin.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/dessin.png" alt="Dessiner" />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Dessin</div>
+                            <div class="portfolio-caption-heading">Dessiner</div>
                             <div class="portfolio-caption-subheading text-muted">Asseyez-vous, sortez du papier et quelques crayons et c'est parti !</div>
                         </div>
                     </div>
@@ -272,7 +270,7 @@
                     <!-- Portfolio item 18-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/benevolat.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/benevolat.png" alt="Faire du bénévolat" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Faire du bénévolat</div>
@@ -284,7 +282,7 @@
                     <!-- Portfolio item 19-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/film.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/film.png" alt="Film+popcorn" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Film + popcorn</div>
@@ -296,7 +294,7 @@
                     <!-- Portfolio item 20-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/cuisine.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/cuisine.png" alt="Cuisiner des repas" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Cuisiner des repas</div>
@@ -308,7 +306,7 @@
                     <!-- Portfolio item 21-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/parcattractions.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/parcattractions.png" alt="Parc d'attractions" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Parc d'attractions</div>
@@ -320,7 +318,7 @@
                     <!-- Portfolio item 22-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/volley.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/volley.png" alt="Volley" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Volley</div>
@@ -332,7 +330,7 @@
                     <!-- Portfolio item 23-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/festival.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/festival.png" alt="Aller à un festival" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Festival</div>
@@ -344,7 +342,7 @@
                     <!-- Portfolio item 24-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/soiree.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/soiree.png" alt="Organiser une soirée" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Organiser une soirée</div>
@@ -356,7 +354,7 @@
                     <!-- Portfolio item 25-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/proche.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/proche.png" alt="Voir un proche" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Voir un proche</div>
@@ -368,7 +366,7 @@
                     <!-- Portfolio item 26-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/course.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/course.png" alt="Course à pieds" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Course à pieds</div>
@@ -380,7 +378,7 @@
                     <!-- Portfolio item 27-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/vacances.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/vacances.png" alt="Organiser ses vacances" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Organiser ses prochaines vacances</div>
@@ -392,7 +390,7 @@
                     <!-- Portfolio item 28-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/rangement.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/rangement.png" alt="Rangement" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Ranger son logement</div>
@@ -404,7 +402,7 @@
                     <!-- Portfolio item 29-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/recette.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/recette.png" alt="Nouvelle recette" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Tester une nouvelle recette</div>
@@ -416,11 +414,23 @@
                     <!-- Portfolio item 30-->
                     <div class="portfolio-item">
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/parc.png" alt="..." />
+                            <img class="img-fluid" src="../assets/img/activites/parc.png" alt="Promenade dans un parc" />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Se promener dans un parc</div>
                             <div class="portfolio-caption-subheading text-muted">Balladez-vous et profitez de la nature dans un parc.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <!-- Portfolio item 31-->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" src="../assets/img/activites/musee.png" alt="Musée" />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Visiter un musée</div>
+                            <div class="portfolio-caption-subheading text-muted">Sélectionnez un musée qui vous intéresse et cultivez-vous.</div>
                         </div>
                     </div>
                 </div>
