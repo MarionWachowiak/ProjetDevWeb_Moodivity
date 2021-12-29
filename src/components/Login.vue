@@ -1,6 +1,7 @@
 <template>
   <div>
 
+
     <!-- Créer un compte -->
     <section class="page-section" id="contact2">
         <div class="container">
@@ -29,6 +30,9 @@
             <!-- Submit Button-->
             <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase" @click="login">login</button></div>
             {{ error }}
+            <br><br><br><br>
+            <!-- Return Button-->
+            <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="quit">Retour à la page d'accueil</button></div>
         </div>
         <br><br><br><br><br><br>
     </section>
@@ -79,6 +83,9 @@ export default {
           console.log(err.response);
           this.error = err.response.data.error
         })
+    },
+    quit() {
+      this.$router.push('/');
     }
   }
 }

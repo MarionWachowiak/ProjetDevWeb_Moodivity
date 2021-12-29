@@ -49,6 +49,9 @@
               <button class="btn btn-primary btn-xl text-uppercase" @click="signup">signup</button>
               <br><br>
               <div class="white">{{ error }}</div>
+              <br><br><br><br>
+            <!-- Return Button-->
+            <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="quit">Retour à la page d'accueil</button></div>
             </div>
         </div>
         <br><br><br><br><br><br>
@@ -102,6 +105,9 @@ export default {
           console.log(err.response)
           this.error = err.response.data.error
         })
+    },
+    quit() {
+      this.$router.push('/');
     }
   }
 }
