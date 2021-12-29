@@ -3,6 +3,15 @@
 # Sources for images : 
 - Main image (in the main page) : https://www.caf.fr/sites/default/files/cnaf/Vies%20de%20famille/RUB%20-%20Elever%20ses%20enfants/Acc%C3%A8s%20aux%20loisirs/vacances-a-la-maison_1.jpg
 - Images of the activities :
+    - escalade : https://www.gap-escalade.com/images/actu/2017-18/guillestre1.png 
+    - marché de Noël : http://sekisrasmi.ru/?www=Les+plus+beaux+march%C3%A9s+de+No%C3%ABl+de+France+en+2020 
+    - cinéma : http://www.lefilmfrancais.com/cinema/127353/les-chiffres-paris-peripherie-du-6-au-12-avril-2016 
+    - randonnée : https://www.sportsnature.org/ 
+    - patinage artistique : https://www.pdfprof.com/PDF_Image.php?idt=6855&t=15
+    - visite du chateau d'Angers : https://montjoye.net/chateau-angers
+    - atelier patisserie : https://www.iledefrance-terredesaveurs.fr/produit-en-ile-de-france/produits/boulangerie-patisserie/patisseries 
+    - bricolage DIY : https://www.pinterest.fr/helloblogzine/diy/ 
+    - Soirée jeux de société : https://www.pieuvre.ca/2017/09/28/jeux-de-societe-une-croissance-folle-de-9-jusquen-2022/ 
     - jardinage : http://entraide-born.com/aide-a-domicile/jardinage-biscarrosse
     - natation : https://www.ja-drancy.com/index.php/la-jad-natation-en-competitions-ce-week-end/
     - bowling : https://clubbowlinglyon.sportsregions.fr/photos-du-club/album-photos-214789 
@@ -30,4 +39,4 @@
 # Sources for content : 
 - Architecture of the project : https://www.djamware.com/post/5a1b779f80aca75eadc12d6e/mongo-express-vue-nodejs-mevn-stack-crud-web-application
 - Authentification system : https://github.com/selfcodinglab/vue-auth
-- Fenêtres pop-up et humeurs : https://www.developpez.net/forums/d172136/javascript/general-javascript/compter-nombre-checkbox-coche/
+- Pop-ups and moods : https://www.developpez.net/forums/d172136/javascript/general-javascript/compter-nombre-checkbox-coche/
