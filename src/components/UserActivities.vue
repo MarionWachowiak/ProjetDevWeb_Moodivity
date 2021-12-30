@@ -24,7 +24,6 @@
         <div class="container">
             <div class="masthead-heading">{{ name }},  </div>
             <div class="masthead-subheading text-uppercase">Découvrez les activités que nous avons sélectionnées pour vous !</div>
-            <div>{{ moods }}</div>
         </div>
     </header>
 
@@ -32,8 +31,8 @@
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Voici les activités que nous vous proposons :</h2>
-                <h3 class="section-subheading text-muted"></h3>
+                <h2 class="section-heading text-uppercase">Voici les activités que nous vous proposons pour les humeurs :</h2>
+                <h3 class="section-subheading text-muted">{{ moods }}</h3>
                 <br>
             </div>
             <div class="row">
@@ -123,6 +122,7 @@ export default {
     if (localStorage.getItem('token') === null) {
       this.$router.push('/login');
     }
+    this.moods = localStorage.getItem('moods');
   },
   mounted() {
     axios.get('http://localhost:5000/user', { headers: { token: localStorage.getItem('token')}})

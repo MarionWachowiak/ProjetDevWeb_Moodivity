@@ -63,9 +63,15 @@
                         </div>
                         <br>
                     </div>
-                    <!-- Submit Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="update">Modifier</button></div>
-                    {{ error }}
+
+                    <!-- Update Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="validateinformations">Modifier mes informations personnelles</button>
+                        <br><br>
+                        <div>{{ errorUser }}</div>
+                        <div>{{ successUser }}</div>
+                        <br>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -175,12 +181,11 @@
             </div>
             <br><br>
 
-            
-            <!-- Submit Button-->
+            <!-- Update Button-->
             <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="validatepersonnality">Enregistrer mes réponses</button>
                 <br><br>
-                <div>{{ error2 }}</div>
-                <div>{{ success }}</div>
+                <div>{{ errorPQ }}</div>
+                <div>{{ successPQ }}</div>
                 <br>
             </div>
             
@@ -422,8 +427,11 @@ export default {
         moods: '',
 
         error: '',
-        error2: '',
         success: '',
+        errorPQ: '',
+        successPQ: '',
+        errorUser: '',
+        successUser: '',
     }
   },
   created() {
@@ -464,6 +472,24 @@ export default {
       this.$router.push('/');
     },
 
+    validateinformations() {
+      let newUser = {
+        email: this.email,
+        name: this.name,
+        birthdate: this.birthdate,
+        city: this.city,
+      }
+      axios.put('http://localhost:5000/updateuserinformations', newUser)
+        .then(res => {
+          this.errorUser = '';
+          this.successUser = res.data.successUser;
+          this.$router.push('/userprofile');
+        }, err => {
+          this.successUser = '';
+          this.errorUser = res.data.errorUser;
+        })
+    },
+
     validatepersonnality() {
       let newPersonnalityQuest = {
         emailUser: this.email,
@@ -482,13 +508,12 @@ export default {
       }
       axios.put('http://localhost:5000/updatepersonnalityquest', newPersonnalityQuest)
         .then(res => {
-          this.error2 = '';
-          this.success = '';
-          localStorage.setItem('token', res.data.token);
+          this.errorPQ = '';
+          this.successPQ = res.data.successPQ;
           this.$router.push('/userprofile');
         }, err => {
-          console.log(err.response)
-          this.error2 = err.response.data.error2
+          this.successPQ = '';
+          this.errorPQ = res.data.errorPQ;
         })
     },
     
@@ -512,6 +537,7 @@ export default {
             }
             if(dbRes.length == 3){
                 this.moods = dbRes;
+                localStorage.setItem("moods", dbRes);
                 this.$router.push('/useractivities');
             }
             

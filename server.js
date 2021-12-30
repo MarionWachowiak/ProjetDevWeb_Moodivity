@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const User = require('./models/User');
 const PersonnalityQuest = require('./models/PersonnalityQuest');
 const Activity = require('./models/Activity')
-const req = require('express/lib/request');
+//const req = require('express/lib/request');
 
 mongoose.connect('mongodb://localhost/moodivity');
 
@@ -71,6 +71,7 @@ app.post('/login', (req, res, next) => {
 })
 
 app.post('/createpersonnalityquest', (req, res, next) => {
+  //Création du nouveau questionnaire de personnalité
   const newPersonnalityQuest = new PersonnalityQuest({
     emailUser: req.body.emailUser,
     personnality: req.body.personnality,
@@ -95,15 +96,38 @@ app.post('/createpersonnalityquest', (req, res, next) => {
     }
     return res.status(200).json({
       title: 'success',
-      success: 'Questionnaire de personnalité enregistré !'
+      success: 'Questionnaire de personnalité créé !'
     })
   })
 })
 
-// Update user profile
+// Update profile : user informations
+app.put('/updateuserinformations', (req, res, next) => {
+  var myquery = { email: req.body.email }
+  //console.log(myquery)
+  var newvalues = { $set: {
+    name: req.body.name,
+    birthdate: req.body.birthdate,
+    city: req.body.city } 
+  }
+  User.updateOne(myquery, newvalues, (err) => {
+    if (err) {
+      return res.json({
+        title: 'errorUser',
+        errorUser: 'Erreur'
+      })
+    }
+    return res.json({
+      title: 'successUser',
+      successUser: 'Modifications de vos informations effectuée !'
+    })
+  })
+})
+
+// Update profile : personnality quest
 app.put('/updatepersonnalityquest', (req, res, next) => {
-  var myquery = { emailUser: req.body.emailUser };
-  console.log(myquery)
+  var myquery = { emailUser: req.body.emailUser }
+  //console.log(myquery)
   var newvalues = { $set: {
     personnality: req.body.personnality,
     outings: req.body.outings,
@@ -117,14 +141,19 @@ app.put('/updatepersonnalityquest', (req, res, next) => {
     activitypeople: req.body.activitypeople,
     cooking: req.body.cooking,
     handicrafts: req.body.handicrafts } 
-  };
-  PersonnalityQuest.updateOne(myquery, newvalues, (err, res, next) => {
+  }
+  PersonnalityQuest.updateOne(myquery, newvalues, (err) => {
     if (err) {
-      return res
-          .status(404)
-          .send({error2: "unsuccessful"})
-    };
-    res.json({success: "success"});
+      return res.json({
+        title: 'errorPQ',
+        errorPQ: 'Erreur'
+      })
+      
+    }
+    return res.json({
+      title: 'successPQ',
+      successPQ: 'Questionnaire de personnalité enregistré !'
+    })
   })
 })
 
