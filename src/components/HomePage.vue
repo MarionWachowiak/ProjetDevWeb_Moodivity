@@ -509,6 +509,7 @@
                         <h4>Oumaima LOUKILIA</h4>
                         <p class="text-muted">Developer</p>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/oumaima-loukilia-106617195/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="mailto:oumaima.loukilia@etud.univ-angers.fr"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -517,6 +518,7 @@
                         <h4>Marion WACHOWIAK</h4>
                         <p class="text-muted">Developer</p>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/marionwachowiak/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="mailto:mwachowiak@etud.univ-angers.fr"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -525,6 +527,7 @@
                         <h4>Nesrine HAFFAR</h4>
                         <p class="text-muted">Developer</p>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/nesrine-haffar-268167172/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="mailto:nesrine.haffar@etud.univ-angers.fr"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
