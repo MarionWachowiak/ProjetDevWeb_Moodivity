@@ -3,7 +3,7 @@
 ### Nom du projet : Moodivity
 
 ### Description du projet :  
-Moodivity est un site web qui permet de proposer à ses utilisateurs des activités en fonction de leur profil, de leurs centres d’intérêts et goûts (musicaux, alimentaires, cinématographiques, et plein d'autres) mais surtout de leur humeur du moment !
+Moodivity (Mood + Activity) est un site web qui permet de proposer à ses utilisateurs des activités en fonction de leur profil, de leurs centres d’intérêts et goûts (musicaux, alimentaires, cinématographiques, et plein d'autres) mais surtout de leur humeur du moment !
   
   
 ### Composition du groupe :  
@@ -23,7 +23,8 @@ utilisateurs, activités, humeur.
   
     
 ### To run locally : 
-* Install MongoDBCompass
+* Install MongoDBCompass  
+* Importer la base de données activités (fichier qui sera déposé ici)
 
 ## Project setup
 ```
@@ -49,7 +50,4 @@ node server.js
 ### Reste à faire
 - Liens entre les humeurs et les activités  
 - Historisation des activités proposées à chaque utilisateur  
-- Remplissage de la base de données : activités  
-- Finitions de la page useractivities
-- Finitions de la homepage (catalogue d'activités à finir)
 
