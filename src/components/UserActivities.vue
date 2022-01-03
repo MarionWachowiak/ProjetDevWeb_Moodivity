@@ -31,9 +31,11 @@
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Voici les activités que nous vous proposons pour les humeurs :</h2>
-                <h3 class="section-subheading text-muted">{{ moods }}</h3>
+                <h2 class="section-heading text-uppercase">Nous vous proposons les activités suiventes selon les humeurs :</h2>
+                <h5 class="section-subheading text-muted">{{ moods }} </h5>
                 <br>
+                <h2 class="section-sheading text-lowercase">Et selon votre personnalité ! </h2>
+                <br><br><br>
             </div>
             <div class="row">
                <div class="col-lg-4 col-sm-6 mb-4" v-for="a in selectedactivities" :key="a.nameActivity">
