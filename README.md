@@ -24,7 +24,7 @@ utilisateurs, activités, humeur.
     
 ### To run locally : 
 * Install MongoDBCompass  
-* Importer la base de données activités (fichier qui sera déposé ici)
+* Importer la base de données activités : fichier activities.json
 
 ## Project setup
 ```
