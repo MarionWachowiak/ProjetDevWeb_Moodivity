@@ -36,41 +36,19 @@
                 <br>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 1-->  
-                    <div class="portfolio-item">
+               <div class="col-lg-4 col-sm-6 mb-4" v-for="a in selectedactivities" :key="a.nameActivity">
+    
+                    <!-- Portfolio items -->
+                    <div class="portfolio-item"   >
                         <a>
-                            <img class="img-fluid" src="../assets/img/activites/escalade.png" alt="..." />
+                            <img class="img-fluid" :src="require('../assets/img/activites/' + a.image + '.png')" alt="..." />
                         </a>
                         <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Escalade</div>
-                            <div class="portfolio-caption-subheading text-muted">Venez vous challenger grâce à ce sport où se mélangent technique et condition physique !</div>
+                            <div class="portfolio-caption-heading">{{ a.nameActivity }}</div>
+                            <div class="portfolio-caption-subheading text-muted">{{ a.description }}</div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
-                    <div class="portfolio-item">
-                        <a>
-                            <img class="img-fluid" src="../assets/img/activites/marchenoel.png" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">Marché de Noël</div>
-                            <div class="portfolio-caption-subheading text-muted">Organisé par la ville d'Angers, ce marché ravira petits et grands !</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
-                    <div class="portfolio-item">
-                        <a>
-                            <img class="img-fluid" src="../assets/img/activites/cinema.png" alt="..." />
-                        </a>
-                        <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">{{ nameActivity }}</div>
-                            <div class="portfolio-caption-subheading text-muted">{{ description }}</div>
-                        </div>
-                    </div>
+                    </div>                   
+
                 </div>
 
                 <div class="text-center">
@@ -97,7 +75,6 @@
 
 </template>
 
-
 <script>
 import axios from 'axios';
 
@@ -109,12 +86,8 @@ export default {
       email: '',
       moods: '',
 
-      nameActivity: '',
-      type: '',
-      place: '',
-      city: '',
-      moodActivity: '',
-      description: '',
+      activities: [],
+      selectedactivities: [],
     }
   },
   created() {
@@ -133,14 +106,15 @@ export default {
 
     axios.get('http://localhost:5000/activities', { headers: { token: localStorage.getItem('token')}})
       .then(res => {
-        this.nameActivity = res.data.activity.nameActivity;
-        this.type = res.data.activity.type;
-        this.place = res.data.activity.place;
-        this.city = res.data.activity.city;
-        this.description = res.data.activity.description;
-        this.moodActivity = res.data.activity.mood;
-      })
+        this.activities = res.data.activity;
 
+        //Sélection des activités à proposer 
+        this.selectedactivities.push(this.activities[Math.floor(Math.random() * 31)]);
+        this.selectedactivities.push(this.activities[Math.floor(Math.random() * 31)]);
+        this.selectedactivities.push(this.activities[Math.floor(Math.random() * 31)]);
+      })
+    
+    
   },
   methods: {
     logout() {

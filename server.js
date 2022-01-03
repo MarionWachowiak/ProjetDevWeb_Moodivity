@@ -220,20 +220,11 @@ app.get('/personnalityquest', (req, res, next) => {
 //grabbing activities info
 app.get('/activities', (req, res, next) => {
     //token is valid
-    Activity.findOne({ nameActivity: "Escalade" }, (err, activity) => {
+    Activity.find((err, activity) => {
+      console.log(activity);
       if (err) return console.log(err)
       return res.status(200).json({
-        title: 'activity grabbed',
-        activity: {
-          nameActivity: activity.nameActivity,
-          type: activity.type,
-          peopleNumber: activity.peopleNumber,
-          cityActivity: activity.city,
-          place: activity.place,
-          description: activity.description,
-          moodActivity: activity.mood,
-          image: activity.image,
-        }
+        activity
       })
     })
   })

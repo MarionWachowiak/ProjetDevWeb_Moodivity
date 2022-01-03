@@ -40,3 +40,6 @@
 - Architecture of the project : https://www.djamware.com/post/5a1b779f80aca75eadc12d6e/mongo-express-vue-nodejs-mevn-stack-crud-web-application
 - Authentification system : https://github.com/selfcodinglab/vue-auth
 - Pop-ups and moods : https://www.developpez.net/forums/d172136/javascript/general-javascript/compter-nombre-checkbox-coche/
+- Display images from database : https://stackoverflow.com/questions/48847644/how-to-bind-img-src-to-data-in-vue
+- Use v-for to display elements : https://fr.vuejs.org/v2/guide/list.html
+
