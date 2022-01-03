@@ -152,8 +152,8 @@
                         <br>
                         <div class="text-center">
                             <b>Vous aimez faire des activités :</b> <br>
-                            <input type="radio" name="activityplace" v-model="activityplace" value="En intérieur"/> En extérieur <br>
-                            <input type="radio" name="activityplace" v-model="activityplace" value="En extérieur"/> En intérieur <br>
+                            <input type="radio" name="activityplace" v-model="activityplace" value="Extérieur"/> En extérieur <br>
+                            <input type="radio" name="activityplace" v-model="activityplace" value="Intérieur"/> En intérieur <br>
                             <input type="radio" name="activityplace" v-model="activityplace" value="Les deux"/> Les deux <br>
                         </div>
                         <br>
@@ -208,7 +208,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Joyeux</h4>
-                            <input type="checkbox" name="mood" value="joyeux"/>
+                            <input type="checkbox" name="mood" value="Joyeux"/>
                         </div>
                     </div>
                 </li>
@@ -217,7 +217,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Triste</h4>
-                            <input type="checkbox" name="mood" value="triste" />
+                            <input type="checkbox" name="mood" value="Triste" />
                         </div>
                     </div>
                 </li>
@@ -228,7 +228,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Calme</h4>
-                            <input type="checkbox" name="mood" value="calme" />
+                            <input type="checkbox" name="mood" value="Calme" />
                         </div>
                     </div>
                 </li>
@@ -237,7 +237,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">En colère</h4>
-                            <input type="checkbox" name="mood" value="colere" />
+                            <input type="checkbox" name="mood" value="En colère" />
                         </div>
                     </div>
                 </li>
@@ -248,7 +248,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Energique</h4>
-                            <input type="checkbox" name="mood" value="energique" />
+                            <input type="checkbox" name="mood" value="Energique" />
                         </div>
                     </div>
                 </li>
@@ -257,7 +257,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Fatigué(e)</h4>
-                            <input type="checkbox" name="mood" value="fatigue" />
+                            <input type="checkbox" name="mood" value="Fatigué" />
                         </div>
                     </div>
                 </li>
@@ -266,7 +266,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Stréssée(e)</h4>
-                            <input type="checkbox" name="mood" value="stresse" />
+                            <input type="checkbox" name="mood" value="Stressé" />
                             
                         </div>
                     </div>
@@ -276,7 +276,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Détendu(e)</h4>
-                            <input type="checkbox" name="mood" value="detendu" />
+                            <input type="checkbox" name="mood" value="Détendu" />
                         </div>
                     </div>
                 </li>
@@ -285,7 +285,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Optimiste</h4>
-                            <input type="checkbox" name="mood" value="optimiste" />
+                            <input type="checkbox" name="mood" value="Optimiste" />
                             
                         </div>
                     </div>
@@ -295,7 +295,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Sérieux(se)</h4>
-                            <input type="checkbox" name="mood" value="serieux" />
+                            <input type="checkbox" name="mood" value="Sérieux" />
                         </div>
                     </div>
                 </li>
@@ -304,7 +304,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Seul(e)</h4>
-                            <input type="checkbox" name="mood" value="seul" />
+                            <input type="checkbox" name="mood" value="Seul" />
                             
                         </div>
                     </div>
@@ -314,7 +314,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Grincheux(se)</h4>
-                            <input type="checkbox" name="mood" value="grincheux" />
+                            <input type="checkbox" name="mood" value="Grincheux" />
                         </div>
                     </div>
                 </li>
@@ -323,7 +323,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Distrait(e)</h4>
-                            <input type="checkbox" name="mood" value="distrait" />
+                            <input type="checkbox" name="mood" value="Distrait" />
                             
                         </div>
                     </div>
@@ -333,7 +333,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="subheading">Anxieux(e)</h4>
-                            <input type="checkbox" name="mood" value="anxieux" />
+                            <input type="checkbox" name="mood" value="Anxieux" />
                         </div>
                     </div>
                 </li>
@@ -537,7 +537,9 @@ export default {
             }
             if(dbRes.length == 3){
                 this.moods = dbRes;
-                localStorage.setItem("moods", dbRes);
+                localStorage.setItem("mood1", dbRes[0]);
+                localStorage.setItem("mood2", dbRes[1]);
+                localStorage.setItem("mood3", dbRes[2]);
                 this.$router.push('/useractivities');
             }
             

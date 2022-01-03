@@ -220,11 +220,11 @@ app.get('/personnalityquest', (req, res, next) => {
 //grabbing activities info
 app.get('/activities', (req, res, next) => {
     //token is valid
-    Activity.find((err, activity) => {
-      console.log(activity);
+    Activity.find((err, activities) => {
+      //console.log(activity);
       if (err) return console.log(err)
       return res.status(200).json({
-        activity
+        activities
       })
     })
   })

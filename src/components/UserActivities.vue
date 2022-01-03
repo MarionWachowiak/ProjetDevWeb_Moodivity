@@ -31,8 +31,8 @@
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Nous vous proposons les activités suiventes selon les humeurs :</h2>
-                <h5 class="section-subheading text-muted">{{ moods }} </h5>
+                <h2 class="section-heading text-uppercase">Nous vous proposons les activités suivantes selon les humeurs :</h2>
+                <h5 class="section-subheading text-muted">{{ mood1}}, {{ mood2 }} et {{ mood3 }}</h5>
                 <br>
                 <h2 class="section-sheading text-lowercase">Et selon votre personnalité ! </h2>
                 <br><br><br>
@@ -40,8 +40,8 @@
             <div class="row">
                <div class="col-lg-4 col-sm-6 mb-4" v-for="a in selectedactivities" :key="a.nameActivity">
     
-                    <!-- Portfolio items -->
-                    <div class="portfolio-item"   >
+                    <!-- Portfolio item 1 -->
+                    <div class="portfolio-item">
                         <a>
                             <img class="img-fluid" :src="require('../assets/img/activites/' + a.image + '.png')" alt="..." />
                         </a>
@@ -49,7 +49,7 @@
                             <div class="portfolio-caption-heading">{{ a.nameActivity }}</div>
                             <div class="portfolio-caption-subheading text-muted">{{ a.description }}</div>
                         </div>
-                    </div>                   
+                    </div>    
 
                 </div>
 
@@ -67,7 +67,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 text-lg-start"></div>
                 <div class="col-lg-4 my-3 my-lg-0"></div>
-                <div class="col-lg-4 text-lg-end">Copyright &copy; Polytech Angers - 2021</div>
+                <div class="col-lg-4 text-lg-end">Copyright &copy; Polytech Angers - 2022</div>
             </div>
         </div>
     </footer>
@@ -77,6 +77,7 @@
 
 </template>
 
+
 <script>
 import axios from 'axios';
 
@@ -84,11 +85,35 @@ export default {
   name: 'UserActivities',
   data() {
     return {
+      //user
       name: '',
       email: '',
-      moods: '',
 
+      //personnality quest
+      emailUser: '',
+      personnality: '',
+      outings: '',
+      hobbies: '',
+      interests: '',
+      sport: '',
+      cinemaseries: '',
+      books: '',
+      museum: '',
+      activityplace: '',
+      activitypeople: '',
+      cooking: '',
+      handicrafts: '',
+
+      //moods
+      mood1: '',
+      mood2: '',
+      mood3: '',
+
+      //list with the activities 
       activities: [],
+      //list with the matching activities
+      matchingactivities: [],
+      //list with the selected activities
       selectedactivities: [],
     }
   },
@@ -97,7 +122,9 @@ export default {
     if (localStorage.getItem('token') === null) {
       this.$router.push('/login');
     }
-    this.moods = localStorage.getItem('moods');
+    this.mood1 = localStorage.getItem('mood1');
+    this.mood2 = localStorage.getItem('mood2');
+    this.mood3 = localStorage.getItem('mood3');
   },
   mounted() {
     axios.get('http://localhost:5000/user', { headers: { token: localStorage.getItem('token')}})
@@ -106,17 +133,69 @@ export default {
         this.email = res.data.user.email;
       }),
 
+    axios.get('http://localhost:5000/personnalityquest', { headers: { token: localStorage.getItem('token')}})
+      .then(res => {
+        this.emailUser = res.data.personnalityquest.emailUser;
+        this.personnality = res.data.personnalityquest.personnality;
+        this.outings = res.data.personnalityquest.outings;
+        this.hobbies = res.data.personnalityquest.hobbies;
+        this.interests = res.data.personnalityquest.interests;
+        this.sport = res.data.personnalityquest.sport;
+        this.cinemaseries = res.data.personnalityquest.cinemaseries;
+        this.books = res.data.personnalityquest.books;
+        this.museum = res.data.personnalityquest.museum;
+        this.activityplace = res.data.personnalityquest.activityplace;
+        this.activitypeople = res.data.personnalityquest.activitypeople;
+        this.cooking = res.data.personnalityquest.cooking;
+        this.handicrafts = res.data.personnalityquest.handicrafts;
+      }),
+
     axios.get('http://localhost:5000/activities', { headers: { token: localStorage.getItem('token')}})
       .then(res => {
-        this.activities = res.data.activity;
+        this.activities = res.data.activities;
 
-        //Sélection des activités à proposer 
-        this.selectedactivities.push(this.activities[Math.floor(Math.random() * 31)]);
-        this.selectedactivities.push(this.activities[Math.floor(Math.random() * 31)]);
-        this.selectedactivities.push(this.activities[Math.floor(Math.random() * 31)]);
-      })
-    
-    
+        //SELECTION OF THE ACTIVITIES TO BE PROPOSED
+        
+        for(let i=0 ; i < this.activities.length ; i++)
+        {
+            //With mood
+            if(this.activities[i].mood === this.mood1 || this.activities[i].mood === this.mood2 || this.activities[i].mood === this.mood3)
+            {
+                /**this.activities[i].mood === this.mood1 || this.activities[i].mood === this.mood2 || this.activities[i].mood === this.mood3
+                //With place
+                if((this.activities[i].place==='Les deux' && this.activityplace==='Les deux'))
+                {
+                  
+                  //With type
+                  if((this.activities[i].type==='Sport' && this.sport==='Oui'))
+                  {
+                    //With people number
+                    if((this.activitypeople==='Seul' || this.activitypeople==='Les deux') && this.activities[i].peopleNumber === '1')
+                    {
+                      this.matchingactivities.push(this.activities[i]);
+                    }
+                  }
+                }
+                 */
+                this.matchingactivities.push(this.activities[i]);  
+            }
+            
+        }
+         
+        //Choose 3 activitues in the list : matchingactivities
+        while(a1==a2 || a1==a3 || a2==a3)
+        {
+            var a1 = Math.floor(Math.random() * this.matchingactivities.length)
+            var a2 = Math.floor(Math.random() * this.matchingactivities.length)
+            var a3 = Math.floor(Math.random() * this.matchingactivities.length)
+        }
+
+        //Put them in the list : selectedactivities
+        this.selectedactivities.push(this.matchingactivities[a1]);
+        this.selectedactivities.push(this.matchingactivities[a2]);
+        this.selectedactivities.push(this.matchingactivities[a3]);
+         
+      })   
   },
   methods: {
     logout() {
