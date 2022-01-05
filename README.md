@@ -47,7 +47,11 @@ node server.js
 ```
   
 
-### Reste à faire
+### Reste à finir
 - Liens entre les humeurs et les activités  
-- Historisation des activités proposées à chaque utilisateur  
+  
 
+### EN BONUS : 
+- Historisation des activités proposées à chaque utilisateur  
+- Cas où l'utilisateur coche "non" à quasiment toutes les questions du personnalityquest  
+- Adresses des lieux des activités en fonction de la ville de l'user (API Google)

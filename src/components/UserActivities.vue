@@ -33,7 +33,7 @@
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Nous vous proposons les activités suivantes selon les humeurs :</h2>
                 <h5 class="section-subheading text-muted">{{ mood1}}, {{ mood2 }} et {{ mood3 }}</h5>
-                <!-- <h5 class="section-subheading text-muted"> M:{{matchingactivities}} M2:{{matchingactivities2}} S:{{selectedactivities}}</h5> -->
+                <!-- <h5 class="section-subheading text-muted"> M:{{matchingactivities}} M2:{{matchingactivities2}} M3:{{matchingactivities3.length}}  S:{{selectedactivities}}</h5> -->
                 <br>
                 <h2 class="section-sheading text-lowercase">Et selon votre personnalité ! </h2>
                 <br><br><br>
@@ -53,11 +53,10 @@
                     </div>    
 
                 </div>
-
+              </div>
                 <div class="text-center">
                 <h2 class="section-heading text-uppercase"></h2>
                 <h3 class="section-subheading text-muted">ENJOY !</h3>
-            </div>
             </div>
         </div>
     </section>
@@ -115,6 +114,7 @@ export default {
       //list with the matching activities
       matchingactivities: [],
       matchingactivities2: [],
+      matchingactivities3: [],
       //list with the selected activities
       selectedactivities: [],
     }
@@ -170,30 +170,80 @@ export default {
         {
           for(let j=0 ; j < this.activities.length ; j++)
           {
+            //With type
             if(this.matchingactivities[i].type === this.activities[j].type)
             {
               if(!this.matchingactivities2.includes(this.matchingactivities[i]))
               {
                 this.matchingactivities2.push(this.matchingactivities[i]);
               }
-              
             } 
           }
         }
 
+        //TYPES
+        for(let i=0 ; i < this.matchingactivities2.length ; i++)
+        {
+          //With type sport
+          if(this.matchingactivities2[i].type==='Sport' && this.sport==='Non')
+          {
+            this.matchingactivities3.push(this.matchingactivities2[i]);
+          }
 
+          //With type cuisine
+          if(this.matchingactivities2[i].type==='Cuisine' && this.cooking==='Oui')
+          {
+            this.matchingactivities3.push(this.matchingactivities2[i]);
+          }
+
+          //With type musique
+          if(this.matchingactivities2[i].type==='Musique' && this.hobbies==='Oui')
+          {
+            this.matchingactivities3.push(this.matchingactivities2[i]);
+          }
+
+          //With type cinéma/séries
+          if(this.matchingactivities2[i].type==='Cinemaseries' && this.cinemaseries==='Oui')
+          {
+            this.matchingactivities3.push(this.matchingactivities2[i]);
+          } 
+
+          //With type livres
+          if(this.matchingactivities2[i].type==='Livres' && this.books==='Oui')
+          {
+            this.matchingactivities3.push(this.matchingactivities2[i]);
+          } 
+
+          //With type musée
+          if(this.matchingactivities2[i].type==='Musée' && (this.museum==='Très intéressant' || this.museum==='Moyennement intéressant'))
+          {
+            this.matchingactivities3.push(this.matchingactivities2[i]);
+          } 
+
+          //With type activités manuelles
+          if(this.matchingactivities2[i].type==='Activités manuelles' && this.handicrafts==='Oui')
+          {
+            this.matchingactivities3.push(this.matchingactivities2[i]);
+          } 
+        }
+
+        //Display 1 activity
+        var a1 = Math.floor(Math.random() * this.matchingactivities3.length)
+        this.selectedactivities.push(this.matchingactivities3[a1]);
+
+/** 
         //Choose 3 activitues in the list : matchingactivities
         while(a1==a2 || a1==a3 || a2==a3)
         {
-            var a1 = Math.floor(Math.random() * this.matchingactivities2.length)
-            var a2 = Math.floor(Math.random() * this.matchingactivities2.length)
-            var a3 = Math.floor(Math.random() * this.matchingactivities2.length)
+            var a1 = Math.floor(Math.random() * this.matchingactivities3.length)
+            var a2 = Math.floor(Math.random() * this.matchingactivities3.length)
+            var a3 = Math.floor(Math.random() * this.matchingactivities3.length)
         }
-
+        
         //Put them in the list : selectedactivities
-        this.selectedactivities.push(this.matchingactivities2[a1]);
-        this.selectedactivities.push(this.matchingactivities2[a2]);
-        this.selectedactivities.push(this.matchingactivities2[a3]);
+        this.selectedactivities.push(this.matchingactivities3[a1]);
+        this.selectedactivities.push(this.matchingactivities3[a2]);
+        this.selectedactivities.push(this.matchingactivities3[a3]);*/
          
       })   
   },
