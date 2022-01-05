@@ -33,6 +33,7 @@
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Nous vous proposons les activités suivantes selon les humeurs :</h2>
                 <h5 class="section-subheading text-muted">{{ mood1}}, {{ mood2 }} et {{ mood3 }}</h5>
+                <!-- <h5 class="section-subheading text-muted"> M:{{matchingactivities}} M2:{{matchingactivities2}} S:{{selectedactivities}}</h5> -->
                 <br>
                 <h2 class="section-sheading text-lowercase">Et selon votre personnalité ! </h2>
                 <br><br><br>
@@ -109,10 +110,11 @@ export default {
       mood2: '',
       mood3: '',
 
-      //list with the activities 
+      //list with the whole activities 
       activities: [],
       //list with the matching activities
       matchingactivities: [],
+      matchingactivities2: [],
       //list with the selected activities
       selectedactivities: [],
     }
@@ -155,45 +157,43 @@ export default {
         this.activities = res.data.activities;
 
         //SELECTION OF THE ACTIVITIES TO BE PROPOSED
-        
         for(let i=0 ; i < this.activities.length ; i++)
         {
-            //With mood
-            if(this.activities[i].mood === this.mood1 || this.activities[i].mood === this.mood2 || this.activities[i].mood === this.mood3)
-            {
-                /**this.activities[i].mood === this.mood1 || this.activities[i].mood === this.mood2 || this.activities[i].mood === this.mood3
-                //With place
-                if((this.activities[i].place==='Les deux' && this.activityplace==='Les deux'))
-                {
-                  
-                  //With type
-                  if((this.activities[i].type==='Sport' && this.sport==='Oui'))
-                  {
-                    //With people number
-                    if((this.activitypeople==='Seul' || this.activitypeople==='Les deux') && this.activities[i].peopleNumber === '1')
-                    {
-                      this.matchingactivities.push(this.activities[i]);
-                    }
-                  }
-                }
-                 */
-                this.matchingactivities.push(this.activities[i]);  
-            }
-            
+          //With mood
+          if(this.activities[i].mood===this.mood1 || this.activities[i].mood===this.mood2 || this.activities[i].mood===this.mood3)
+          {
+            this.matchingactivities.push(this.activities[i]);
+          }  
         }
          
+        for(let i=0 ; i < this.matchingactivities.length ; i++)
+        {
+          for(let j=0 ; j < this.activities.length ; j++)
+          {
+            if(this.matchingactivities[i].type === this.activities[j].type)
+            {
+              if(!this.matchingactivities2.includes(this.matchingactivities[i]))
+              {
+                this.matchingactivities2.push(this.matchingactivities[i]);
+              }
+              
+            } 
+          }
+        }
+
+
         //Choose 3 activitues in the list : matchingactivities
         while(a1==a2 || a1==a3 || a2==a3)
         {
-            var a1 = Math.floor(Math.random() * this.matchingactivities.length)
-            var a2 = Math.floor(Math.random() * this.matchingactivities.length)
-            var a3 = Math.floor(Math.random() * this.matchingactivities.length)
+            var a1 = Math.floor(Math.random() * this.matchingactivities2.length)
+            var a2 = Math.floor(Math.random() * this.matchingactivities2.length)
+            var a3 = Math.floor(Math.random() * this.matchingactivities2.length)
         }
 
         //Put them in the list : selectedactivities
-        this.selectedactivities.push(this.matchingactivities[a1]);
-        this.selectedactivities.push(this.matchingactivities[a2]);
-        this.selectedactivities.push(this.matchingactivities[a3]);
+        this.selectedactivities.push(this.matchingactivities2[a1]);
+        this.selectedactivities.push(this.matchingactivities2[a2]);
+        this.selectedactivities.push(this.matchingactivities2[a3]);
          
       })   
   },

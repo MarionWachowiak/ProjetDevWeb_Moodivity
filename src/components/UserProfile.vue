@@ -549,9 +549,6 @@ export default {
  
     },
 
-    update() {
-    }
-
   }
 }
 </script>

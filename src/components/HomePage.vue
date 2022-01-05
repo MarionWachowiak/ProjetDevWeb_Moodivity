@@ -213,7 +213,7 @@ export default {
   mounted() {
     axios.get('http://localhost:5000/activities', { headers: { token: localStorage.getItem('token')}})
       .then(res => {
-        this.activities = res.data.activity;
+        this.activities = res.data.activities;
       })
 
   }
