@@ -109,7 +109,7 @@
   "type": "Jeux",
   "peopleNumber": "4",
   "city": "Angers",
-  "mood": "Optimiste",
+  "mood": "Joyeux",
   "place": "Intérieur",
   "__v": 0,
   "description": "Invitez quelques amis et affrontez-vous lors de parties de petits chevaux, de Puissance 4 ou même de Monopoly !",
@@ -263,7 +263,7 @@
     "$oid": "61d2dab0cee4fa5898a07f50"
   },
   "type": "Sortie",
-  "peopleNumber": "1",
+  "peopleNumber": "4",
   "city": "Angers",
   "mood": "Joyeux",
   "place": "Extérieur",
@@ -317,7 +317,7 @@
   "type": "Sortie",
   "peopleNumber": "1",
   "city": "Angers",
-  "mood": "Détendu",
+  "mood": "Seul",
   "place": "Les deux",
   "__v": 0,
   "description": "Allez voir un proche que vous n'avez pas vu depuis un moment !",
@@ -369,7 +369,7 @@
   "type": "Cuisine",
   "peopleNumber": "1",
   "city": "Angers",
-  "mood": "Calme",
+  "mood": "Détendu",
   "place": "Intérieur",
   "__v": 0,
   "description": "Cherchez une nouvelle recette et testez-la (vous nous en direz des nouvelles !)",
@@ -401,4 +401,329 @@
   "description": "Sélectionnez un musée qui vous intéresse et allez vous cultiver.",
   "nameActivity": "Visiter un musée",
   "image": "musee"
+},{
+  "_id": {
+    "$oid": "61d703c2c991cb420d1d98e4"
+  },
+  "type": "Sport",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "En colère",
+  "place": "Les deux",
+  "__v": 0,
+  "description": "Défoulez-vous en tapant dans un sac de frappe ou en affrontant un adversaire !",
+  "nameActivity": "Faire de la boxe",
+  "image": "boxe"
+},{
+  "_id": {
+    "$oid": "61d70471c991cb420d1d98e5"
+  },
+  "type": "Cuisine",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "En colère",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Défoulez-vous en préparant des sablés !",
+  "nameActivity": "Faire des sablés",
+  "image": "sables"
+},{
+  "_id": {
+    "$oid": "61d70606c991cb420d1d98e6"
+  },
+  "type": "Sport",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Anxieux",
+  "place": "Les deux",
+  "__v": 0,
+  "description": "Détendez-vous avec la pratique du yoga !",
+  "nameActivity": "Yoga",
+  "image": "yoga"
+},{
+  "_id": {
+    "$oid": "61d70650c991cb420d1d98e7"
+  },
+  "type": "Bien-être",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Anxieux",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Préparez-vous une bonne tisane et détendez-vous.",
+  "nameActivity": "Boire une tisane",
+  "image": "tisane"
+},{
+  "_id": {
+    "$oid": "61d70b50c991cb420d1d98e8"
+  },
+  "type": "Associatif",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Anxieux",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Préparez un repas à donner à une association qui s'occupera d'en faire profiter une personne dans le besoin.",
+  "nameActivity": "Préparer un repas pour quelqu'un dans le besoin",
+  "image": "repas"
+},{
+  "_id": {
+    "$oid": "61d70b81c991cb420d1d98e9"
+  },
+  "type": "Associatif",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Energique",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Prenez rendez-vous pour aller donner votre sang et aidez à sauver des vies !",
+  "nameActivity": "Donner son sang",
+  "image": "dondusang"
+},{
+  "_id": {
+    "$oid": "61d70bbfc991cb420d1d98ea"
+  },
+  "type": "Bien-être",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Fatigué",
+  "place": "Les deux",
+  "__v": 0,
+  "description": "T'es fatigué(e) ? Bois un café !",
+  "nameActivity": "Boire un café",
+  "image": "cafe"
+},{
+  "_id": {
+    "$oid": "61d70c3fc991cb420d1d98eb"
+  },
+  "type": "Activités manuelles",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Détendu",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Achetez ou récupérez un album photo, imprimez quelques photos et c'est parti !",
+  "nameActivity": "Réaliser un album photo",
+  "image": "albumphoto"
+},{
+  "_id": {
+    "$oid": "61d70c92c991cb420d1d98ec"
+  },
+  "type": "Jeux",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Seul",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Vous vous sentez seul(e) ? Jouez au mythique jeu du solitaire !",
+  "nameActivity": "Jouer au solitaire",
+  "image": "solitaire"
+},{
+  "_id": {
+    "$oid": "61d70d11c991cb420d1d98ed"
+  },
+  "type": "Activités manuelles",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Stréssé",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Sortez vos plus beaux crayons et détendez-vous en coloriant !",
+  "nameActivity": "Faire un coloriage",
+  "image": "coloriage"
+},{
+  "_id": {
+    "$oid": "61d70d83c991cb420d1d98ee"
+  },
+  "type": "Activités manuelles",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Grincheux",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Détendez-vous en assemblant les pièces d'un puzzle !",
+  "nameActivity": "Faire un puzzle",
+  "image": "puzzle"
+},{
+  "_id": {
+    "$oid": "61d70dffc991cb420d1d98ef"
+  },
+  "type": "Sport",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Stréssé",
+  "place": "Extérieur",
+  "__v": 0,
+  "description": "Posez votre canne à pêche et attendez que ça morde !",
+  "nameActivity": "Pêche",
+  "image": "peche"
+},{
+  "_id": {
+    "$oid": "61d70e6ac991cb420d1d98f0"
+  },
+  "type": "Cinemaseries",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Stréssé",
+  "place": "Extérieur",
+  "__v": 0,
+  "description": "Renseignez-vous sur les prochaines séances de cinéma de plein air proches de chez vous et foncez !",
+  "nameActivity": "Cinéma de plein air",
+  "image": "cinemapleinair"
+},{
+  "_id": {
+    "$oid": "61d70e99c991cb420d1d98f1"
+  },
+  "type": "Bien-être",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Fatigué",
+  "place": "Les deux",
+  "__v": 0,
+  "description": "Vous êtes fatigué(e) ? Reposez-vous !",
+  "nameActivity": "Faire une sieste",
+  "image": "sieste"
+},{
+  "_id": {
+    "$oid": "61d71b57c991cb420d1d98f2"
+  },
+  "type": "Musique",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Triste",
+  "place": "Les deux",
+  "__v": 0,
+  "description": "Un peu de musique vous remontera le moral !",
+  "nameActivity": "Ecouter de la musique",
+  "image": "ecoutermusique"
+},{
+  "_id": {
+    "$oid": "61d71bb7c991cb420d1d98f3"
+  },
+  "type": "Musique",
+  "peopleNumber": "2",
+  "city": "Angers",
+  "mood": "Grincheux",
+  "place": "Les deux",
+  "__v": 0,
+  "description": "Un peu de musique vous remontera le moral !",
+  "nameActivity": "Aller à un concert",
+  "image": "concert"
+},{
+  "_id": {
+    "$oid": "61d71c07c991cb420d1d98f4"
+  },
+  "type": "Cinemaseries",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Triste",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Détendez-vous devant un épisode de votre série préférée et oubliez vous soucis !",
+  "nameActivity": "Regarder un épisode d'une série",
+  "image": "serie"
+},{
+  "_id": {
+    "$oid": "61d71cc9c991cb420d1d98f5"
+  },
+  "type": "Livres",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Sérieux",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Allez faire le plein de livres à lire !",
+  "nameActivity": "Aller à la bibliothèque",
+  "image": "bibliotheque"
+},{
+  "_id": {
+    "$oid": "61d71d77c991cb420d1d98f6"
+  },
+  "type": "Bien-être",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Distrait",
+  "place": "Les deux",
+  "__v": 0,
+  "description": "Posez vos écrans, ça vous fera du bien !",
+  "nameActivity": "Se déconnecter des réseaux sociaux",
+  "image": "reseauxsociaux"
+},{
+  "_id": {
+    "$oid": "61d71db6c991cb420d1d98f7"
+  },
+  "type": "Bien-être",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Distrait",
+  "place": "Les deux",
+  "__v": 0,
+  "description": "Entrainez votre cerveaux et résolvez les grilles les plus impressionnantes !",
+  "nameActivity": "Faire des mots croisés",
+  "image": "motscroises"
+},{
+  "_id": {
+    "$oid": "61d71e05c991cb420d1d98f8"
+  },
+  "type": "Sport",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Distrait",
+  "place": "Extérieur",
+  "__v": 0,
+  "description": "Concentrez-vous, frappez la balle et visez correctement !",
+  "nameActivity": "Golf",
+  "image": "golf"
+},{
+  "_id": {
+    "$oid": "61d71e2bc991cb420d1d98f9"
+  },
+  "type": "Bien-être",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Fatigué",
+  "place": "Intérieur",
+  "__v": 0,
+  "description": "Faites vous chouchoutez au spa et détendez-vous !",
+  "nameActivity": "Aller au spa",
+  "image": "spa"
+},{
+  "_id": {
+    "$oid": "61d71e7fc991cb420d1d98fa"
+  },
+  "type": "Livres",
+  "peopleNumber": "1",
+  "city": "Angers",
+  "mood": "Sérieux",
+  "place": "Les deux",
+  "__v": 0,
+  "description": "Suivez les actualités du moment et informez-vous !",
+  "nameActivity": "Lire le journal",
+  "image": "journal"
+},{
+  "_id": {
+    "$oid": "61d71ec3c991cb420d1d98fb"
+  },
+  "type": "Sortie",
+  "peopleNumber": "2",
+  "city": "Angers",
+  "mood": "Optimiste",
+  "place": "Extérieur",
+  "__v": 0,
+  "description": "Partez avec quelques amis et une tente et profitez de la nature !",
+  "nameActivity": "Faire du camping",
+  "image": "camping"
+},{
+  "_id": {
+    "$oid": "61d71ef4c991cb420d1d98fc"
+  },
+  "type": "Jeux",
+  "peopleNumber": "2",
+  "city": "Angers",
+  "mood": "Détendu",
+  "place": "Extérieur",
+  "__v": 0,
+  "description": "Affrontez un ou plusieurs amis au cours de ce jeu mythique !",
+  "nameActivity": "Jouer au Mölkky",
+  "image": "molkky"
 }]
