@@ -31,7 +31,7 @@
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Nous vous proposons les activités suivantes selon les humeurs :</h2>
+                <h2 class="section-heading text-uppercase">Nous vous proposons l'activité suivante pour les humeurs :</h2>
                 <h5 class="section-subheading text-muted">{{ mood1}}, {{ mood2 }} et {{ mood3 }}</h5>
                 <!-- <h5 class="section-subheading text-muted"> M:{{matchingactivities}} M2:{{matchingactivities2}} M3:{{matchingactivities3.length}}  S:{{selectedactivities}}</h5> -->
                 <br>
@@ -39,7 +39,7 @@
                 <br><br><br>
             </div>
             <div class="row">
-               <div class="col-lg-4 col-sm-6 mb-4" v-for="a in selectedactivities" :key="a.nameActivity">
+               <div class="centered-element" v-for="a in selectedactivities" :key="a.nameActivity">
     
                     <!-- Portfolio item 1 -->
                     <div class="portfolio-item">
@@ -50,19 +50,40 @@
                             <div class="portfolio-caption-heading">{{ a.nameActivity }}</div>
                             <div class="portfolio-caption-subheading text-muted">{{ a.description }}</div>
                         </div>
-                    </div>    
+                    </div>
+                    <div class="portfolio-item">
+                        <!-- Choose this activity Button-->
+                        <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="chosenactivity">Je choisis cette activité !</button>
+                        </div>
+                        
+                        <br>
+                        <!-- Another activity Button-->
+                        <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="anotheractivity">Cette activité ne me plaît pas...</button>
+                        </div>
+
+                        <br><br><br><br>
+                        <!-- Update Button-->
+                        <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="returnprofile">Retour à mon profil</button>
+                        </div>
+                    </div>  
 
                 </div>
               </div>
                 <div class="text-center">
                 <h2 class="section-heading text-uppercase"></h2>
+                <br><br>
                 <h3 class="section-subheading text-muted">ENJOY !</h3>
             </div>
+
         </div>
+
     </section>
+
+
     
     <!-- Footer-->
     <footer class="footer py-4">
+      
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 text-lg-start"></div>
@@ -215,7 +236,7 @@ export default {
           } 
 
           //With type musée
-          if(this.matchingactivities2[i].type==='Musée' && (this.museum==='Très intéressant' || this.museum==='Moyennement intéressant'))
+          if(this.matchingactivities2[i].type==='Musées' && (this.museum==='Très intéressant' || this.museum==='Moyennement intéressant'))
           {
             this.matchingactivities3.push(this.matchingactivities2[i]);
           } 
@@ -231,7 +252,9 @@ export default {
         var a1 = Math.floor(Math.random() * this.matchingactivities3.length)
         this.selectedactivities.push(this.matchingactivities3[a1]);
 
-/** 
+        localStorage.setItem("selectedactivity", this.selectedactivities[0].nameActivity);
+
+        /** 
         //Choose 3 activitues in the list : matchingactivities
         while(a1==a2 || a1==a3 || a2==a3)
         {
@@ -243,7 +266,8 @@ export default {
         //Put them in the list : selectedactivities
         this.selectedactivities.push(this.matchingactivities3[a1]);
         this.selectedactivities.push(this.matchingactivities3[a2]);
-        this.selectedactivities.push(this.matchingactivities3[a3]);*/
+        this.selectedactivities.push(this.matchingactivities3[a3]);
+        */
          
       })   
   },
@@ -253,7 +277,13 @@ export default {
       this.$router.push('/');
     },
     returnprofile() {
-        this.$router.push('/userprofile')
+      this.$router.push('/userprofile')
+    },
+    anotheractivity() {
+      this.$router.push('/useractivities')
+    },
+    chosenactivity() {
+      this.$router.push('/chosenactivity')
     }
   }
 }

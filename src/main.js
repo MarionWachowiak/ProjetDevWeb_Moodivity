@@ -2,7 +2,8 @@ import Vue from 'vue';
 import App from './App';
 import VueRouter from 'vue-router';
 import UserProfile from './components/UserProfile';
-import UserActivities from './components/UserActivities'
+import UserActivities from './components/UserActivities';
+import ChosenActivity from './components/ChosenActivity';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import HomePage from './components/HomePage';
@@ -16,6 +17,7 @@ const routes = [
   { path: '/homepage', component: HomePage },
   { path: '/userprofile', component: UserProfile },
   { path: '/useractivities', component: UserActivities },
+  { path: '/chosenactivity', component: ChosenActivity },
   { path: '/signup', component: Signup },
   { path: '/login', component: Login }
 ]

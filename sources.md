@@ -34,6 +34,31 @@
     - recette : https://cuisine.journaldesfemmes.fr/idees-recettes/2735941-recettes-faciles/ 
     - parc : https://www.anigaido.com/lieux/jardins-parcs/parc-de-la-pepiniere
     - musée : https://pro.visitparisregion.com/offre-loisirs-et-affaires/offre-de-la-destination/une-activite/impressionnisme/lieux-de-visites-impressionnistes/musee-marmottan-monet
+    - boxe : https://www.gqitalia.it/sport/article/boxe-benefici-fisici-mentali-educativi 
+    - sablés : https://www.oliveoiltimes.com/fr/recipes/olive-oil-sable-cookies 
+    - yoga : https://www.medico-olbernhau.de/yoga 
+    - tisane : https://goodactu.com/la-tisane-cest-tendance/
+    - repas personne dans le besoin : https://www.polesante13.fr/blog/actualites-1/cuisiner-un-repas-equilibre-pour-3eur-retour-sur-l-atelier-4 
+    - don du sang : https://burnhaupt-le-bas.fr/evenement/don-sang-2/
+    - boire un café : https://www.futura-sciences.com/sante/actualites/glycemie-meilleur-moment-boire-son-cafe-matin-83324/
+    - faire un album photo : http://chestnutsandpeonies.com/cheerz-mon-avis-sur-la-creation-dalbum-photo-personnalise/
+    - solitaire : https://www.microsoft.com/fr-ch/p/solitaire-francais/9wzdncrfj3tt
+    - coloriage : http://www.zencouleur.fr/blog
+    - puzzle : https://www.24matins.fr/le-bon-coin-elle-propose-de-faire-vos-puzzles-71612
+    - pêche : https://www.letarnlibre.com/2018/03/09/7078-peche-truite-demain-grand-jour-pour-175-pecheurs-tarnais.html
+    - cinéma plein air: brabant-wallon.lacapitale.be/103236/article/2017-07-13/le-cine-en-plein-air-debarque-deja-ce-samedi-dans-lest
+    - sieste : https://www.santemagazine.fr/sante/maladies/maladies-neurologiques/sommeil/5-questions-a-se-poser-sur-la-sieste-426072
+    - écouter de la musique : https://fr.pov21.com/les-adolescents-se-demandent-le-genre-de-musique-nous-influence-t-il/
+    - concert : https://bluemountainbb.com/blog/2020/01/missoula-concerts/
+    - épisode de série : https://www.digitaleterrestrefacile.it/2020/03/come-vedere-le-serie-tv-gratis-in-streaming-i-migliori-siti/
+    - bibliothèque : https://www.biblioalgarve.com/2019/06/la-bibliotheque-du-rijksmuseum-amsterdam.html
+    - déconnexion réseaux sociaux : https://www.obsessio-nails.fr/blog/nouveautes-obsessio-nails/cyber-connexion
+    - mots croisés : https://www.giletfemme.fr/mots-croises-je-pratique-regulierement-cette-activite-qui-me-detend.html
+    - golf : https://www.giletfemme.fr/mots-croises-je-pratique-regulierement-cette-activite-qui-me-detend.html 
+    - spa : http://www.le-spa-gonflable.fr/spa-jacuzzi-colmar/ 
+    - journal : https://www.rtl.fr/culture/medias-people/la-confiance-des-francais-envers-les-medias-traditionnels-en-hausse-7791944525
+    - camping : https://www.eurotunnel.com/fr/inspiration/camping-en-angleterre/
+    - molkky : https://ecomobi.fr/offre-1262.html
   
   
 # Sources for content : 

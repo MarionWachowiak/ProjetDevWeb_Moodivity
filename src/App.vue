@@ -683,6 +683,11 @@ progress {
     max-width: 1320px;
   }
 }
+.centered-element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;

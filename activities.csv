@@ -1,0 +1,32 @@
+__v,_id,city,mood,nameActivity,peopleNumber,place,type
+0,6187e452e051fc46f0f6dafa,Angers,Joyeux,Escalade,2,Intérieur,Sport
+0,61ba6fd472a0caf89fae1075,Angers,Optimiste,Atelier Pâtisserie,1,Intérieur,Cuisine
+0,61ba704d72a0caf89fae1076,Angers,Calme,Cinéma,1,Intérieur,Culture
+0,61d2d5eecee4fa5898a07f3f,Angers,Energique,Marché de Noël,1,Extérieur,Sortie
+0,61d2d632cee4fa5898a07f40,Trélazé,Energique,Randonnée,1,Extérieur,Sport
+0,61d2d668cee4fa5898a07f41,Angers,Calme,Patinage artistique,2,Intérieur,Sport
+0,61d2d6becee4fa5898a07f42,Angers,Optimiste,"Visite du château d'Angers",1,Intérieur,Musées
+0,61d2d701cee4fa5898a07f43,Angers,Calme,Bricolage DIY,1,Intérieur,Activités manuelles
+0,61d2d766cee4fa5898a07f44,Angers,Optimiste,Soirée jeux de sociétés,4,Intérieur,Jeux
+0,61d2d79acee4fa5898a07f45,Angers,En colère,Jardinage,1,Les deux,Bien-être
+0,61d2d7c9cee4fa5898a07f46,Angers,Engergique,Natation,1,Les deux,Sport
+0,61d2d7edcee4fa5898a07f47,Angers,Seul,Bowling,2,Intérieur,Sortie
+0,61d2d832cee4fa5898a07f48,Angers,Grincheux,Méditation,1,Les deux,Bien-être
+0,61d2d885cee4fa5898a07f49,Angers,Anxieux,Jouer à un jeu vidéo,1,Les deux,Jeux
+0,61d2d8edcee4fa5898a07f4a,Angers,Détendu,Lecture,1,Intérieur,Livres
+0,61d2d95acee4fa5898a07f4b,Angers,Stréssé,Prendre un cours de chant,1,Intérieur,Musique
+0,61d2d996cee4fa5898a07f4c,Angers,Calme,Dessiner,1,Intérieur,Activités manuelles
+0,61d2d9dfcee4fa5898a07f4d,Angers,Seul,Faire du bénévolat,1,Les deux,Associatif
+0,61d2da2fcee4fa5898a07f4e,Angers,Fatigué,Film + popcorn,1,Intérieur,Cinemaseries
+0,61d2da81cee4fa5898a07f4f,Angers,Sérieux,Cuisiner des repas,1,Intérieur,Cuisine
+0,61d2dab0cee4fa5898a07f50,Angers,Joyeux,"Parc d'attractions",1,Extérieur,Sortie
+0,61d2dad5cee4fa5898a07f51,Angers,Energique,Volley,4,Intérieur,Sport
+0,61d2db03cee4fa5898a07f52,Angers,Energique,Festival,2,Extérieur,Sortie
+0,61d2db31cee4fa5898a07f53,Angers,Sérieux,Organiser une soirée,2,Intérieur,Anticipation
+0,61d2db78cee4fa5898a07f54,Angers,Détendu,Voir un proche,1,Les deux,Sortie
+0,61d2dbb4cee4fa5898a07f55,Angers,Energique,Course à pieds,1,Extérieur,Sport
+0,61d2dbe6cee4fa5898a07f56,Angers,Triste,Organiser ses prochaines vacances,1,Intérieur,Anticipation
+0,61d2dc1dcee4fa5898a07f57,Angers,Distrait,Ranger son logement,1,Intérieur,Bien-être
+0,61d2dc46cee4fa5898a07f58,Angers,Calme,Tester une nouvelle recette,1,Intérieur,Cuisine
+0,61d2dc87cee4fa5898a07f59,Angers,Anxieux,Se promener dans un parc,1,Extérieur,Bien-être
+0,61d2dcc0cee4fa5898a07f5a,Angers,Sérieux,Visiter un musée,1,Intérieur,Musées
