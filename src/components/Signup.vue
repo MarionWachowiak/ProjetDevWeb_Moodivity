@@ -90,6 +90,7 @@ export default {
   },
   methods: {
     signup() {
+      //Create the new user in the database
       let newUser = {
         name: this.name,
         birthdate: this.birthdate,
@@ -98,6 +99,30 @@ export default {
         password: this.password
       }
       axios.post('http://localhost:5000/signup', newUser)
+        .then(res => {
+          this.error = '';
+          this.$router.push('/login');
+        }, err => {
+          console.log(err.response)
+          this.error = err.response.data.error
+        })
+
+      let newPersonnalityQuest = {
+        emailUser: this.email,
+        personnality: '',
+        outings: '',
+        hobbies: '',
+        interests: '',
+        sport: '',
+        cinemaseries: '',
+        books: '',
+        museum: '',
+        activityplace: '',
+        activitypeople: '',
+        cooking: '',
+        handicrafts: '',
+      }
+      axios.post('http://localhost:5000/createpersonnalityquest', newPersonnalityQuest)
         .then(res => {
           this.error = '';
           this.$router.push('/login');

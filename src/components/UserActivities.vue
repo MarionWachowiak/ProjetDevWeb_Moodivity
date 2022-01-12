@@ -283,7 +283,26 @@ export default {
       this.$router.push('/useractivities')
     },
     chosenactivity() {
-      this.$router.push('/chosenactivity')
+      let newActivitiesHistory = {
+        email: this.email,
+        type: this.selectedactivities[0].type,
+        peopleNumber: this.selectedactivities[0].peopleNumber,
+        city: this.selectedactivities[0].city,
+        mood: this.selectedactivities[0].mood,
+        place: this.selectedactivities[0].place,
+        description: this.selectedactivities[0].description,
+        nameActivity: this.selectedactivities[0].nameActivity,
+        image: this.selectedactivities[0].image,
+      }
+      axios.post('http://localhost:5000/createactivitieshistory', newActivitiesHistory)
+        .then(res => {
+          this.error = '';
+          this.$router.push('/chosenactivity');
+        }, err => {
+          console.log(err.response)
+          this.error = err.response.data.error;
+        })
+      
     }
   }
 }

@@ -67,4 +67,5 @@
 - Pop-ups and moods : https://www.developpez.net/forums/d172136/javascript/general-javascript/compter-nombre-checkbox-coche/
 - Display images from database : https://stackoverflow.com/questions/48847644/how-to-bind-img-src-to-data-in-vue
 - Use v-for to display elements : https://fr.vuejs.org/v2/guide/list.html
-
+- Reverse an array : https://thewebdev.info/2021/05/22/how-to-reverse-the-order-of-an-array-using-v-for-in-vue-js/
+- Remove the last element of an array : https://www.tutorialspoint.com/How-to-remove-last-array-element-in-JavaScript-and-return-it

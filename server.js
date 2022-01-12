@@ -6,7 +6,8 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const User = require('./models/User');
 const PersonnalityQuest = require('./models/PersonnalityQuest');
-const Activity = require('./models/Activity')
+const Activity = require('./models/Activity');
+const ActivitiesHistory = require('./models/ActivitiesHistory');
 //const req = require('express/lib/request');
 
 mongoose.connect('mongodb://localhost/moodivity');
@@ -97,6 +98,33 @@ app.post('/createpersonnalityquest', (req, res, next) => {
     return res.status(200).json({
       title: 'success',
       success: 'Questionnaire de personnalité créé !'
+    })
+  })
+})
+
+app.post('/createactivitieshistory', (req, res, next) => {
+  //Création du nouveau questionnaire de personnalité
+  const newActivitiesHistory = new ActivitiesHistory({
+    email: req.body.email,
+    type: req.body.type,
+    peopleNumber: req.body.peopleNumber,
+    city: req.body.city,
+    mood: req.body.mood,
+    place: req.body.place,
+    description: req.body.description,
+    nameActivity: req.body.nameActivity,
+    image: req.body.image,
+  })
+  newActivitiesHistory.save(err => {
+    if (err) {
+      return res.status(400).json({
+        title: 'error',
+        error: 'Erreur'
+      })
+    }
+    return res.status(200).json({
+      title: 'success',
+      success: 'Historisation de l\'activité effectuée !'
     })
   })
 })
@@ -221,13 +249,34 @@ app.get('/personnalityquest', (req, res, next) => {
 app.get('/activities', (req, res, next) => {
     //token is valid
     Activity.find((err, activities) => {
-      //console.log(activity);
+      //console.log(activities);
       if (err) return console.log(err)
       return res.status(200).json({
         activities
       })
     })
   })
+
+//grabbing history activities info
+app.get('/activitieshistory', (req, res, next) => {
+  let token = req.headers.token; //token
+  jwt.verify(token, 'secretkey', (err, decoded) => {
+    if (err) return res.status(401).json({
+      title: 'unauthorized'
+    })
+    //token is valid
+    if(decoded.userE!=null)
+    {
+      ActivitiesHistory.find({ email: decoded.userE }, (err, activitieshistory) => {
+        //console.log(activitieshistory);
+        if (err) return console.log(err)
+        return res.status(200).json({
+          activitieshistory
+        })
+      })
+    }
+  })
+})
 
 //Port
 const port = process.env.PORT || 5000;

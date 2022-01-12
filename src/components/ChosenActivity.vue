@@ -26,29 +26,75 @@
         </div>
     </header>
 
-    <!-- Activités proposées -->
+    <!-- Chosen activity -->
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Merci d'avoir sélectionné l'activité :</h2>
-                <br>
-                <h2 class="section-sheading">{{ selectedactivity }}</h2>
-                <br><br><br>
+                
             </div>
             <div class="row">
                 <div class="centered-element">
-                    <br><br><br><br>
-                    <!-- Update Button-->
-                    <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="returnprofile">Retour à mon profil</button>
+                    
+                    <!-- Portfolio items -->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" :src="require('../assets/img/activites/' + chosenactivity.image + '.png')" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">{{ chosenactivity.nameActivity }}</div>
+                            <div class="portfolio-caption-subheading text-muted">{{ chosenactivity.description }}</div>
+                        </div>
                     </div>
+                   
                 </div>
             </div>
-
         </div>
-
     </section>
 
+    <!-- Portfolio Grid-->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Les dernières activités que vous avez sélectionné sont :</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4" v-for="a in sixactivitieshistory.slice().reverse()" :key="a.nameActivity">
+                    
+                    <!-- Portfolio items -->
+                    <div class="portfolio-item">
+                        <a>
+                            <img class="img-fluid" :src="require('../assets/img/activites/' + a.image + '.png')" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">{{ a.nameActivity }}</div>
+                            <div class="portfolio-caption-subheading text-muted">{{ a.description }}</div>
+                        </div>
+                    </div>                   
 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chosen activity -->
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                
+            </div>
+            <div class="row">
+                <div class="centered-element">
+                    
+                  <!-- Return to profile Button-->
+                  <div class="text-center"><button class="btn btn-primary btn-l text-uppercase" @click="returnprofile">Retour à mon profil</button></div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    
+                    
     
     <!-- Footer-->
     <footer class="footer py-4">
@@ -79,42 +125,41 @@ export default {
       name: '',
       email: '',
 
-      //moods
-      mood1: '',
-      mood2: '',
-      mood3: '',
-    
-      //Activities
-      activities: '',
+      chosenactivity: [],
 
-      //selected activity
-      selectedactivity: ''
+      //History of the chosen activities
+      fullactivitieshistory: [],
+      sixactivitieshistory: []
     }
-  },
-  mounted() {
-    axios.get('http://localhost:5000/user', { headers: { token: localStorage.getItem('token')}})
-      .then(res => {
-        this.name = res.data.user.name;
-        this.city = res.data.user.city;
-        this.birthdate = res.data.user.birthdate;
-        this.email = res.data.user.email;
-      })
-
-    axios.get('http://localhost:5000/activities', { headers: { token: localStorage.getItem('token')}})
-      .then(res => {
-        this.activities = res.data.activities;
-      })
   },
   created() {
     //user is not authorized
     if (localStorage.getItem('token') === null) {
       this.$router.push('/login');
     }
-    this.mood1 = localStorage.getItem('mood1');
-    this.mood2 = localStorage.getItem('mood2');
-    this.mood3 = localStorage.getItem('mood3');
-
     this.selectedactivity = localStorage.getItem('selectedactivity');
+  },
+  mounted() {
+    axios.get('http://localhost:5000/user', { headers: { token: localStorage.getItem('token')}})
+      .then(res => {
+        this.name = res.data.user.name;
+        this.email = res.data.user.email;
+      })
+
+    axios.get('http://localhost:5000/activitieshistory', { headers: { token: localStorage.getItem('token')}})
+      .then(res => {
+        this.fullactivitieshistory = res.data.activitieshistory;
+
+        // Pop the last activity in the last : the chosen activity
+        this.chosenactivity = this.fullactivitieshistory.pop();
+        
+        // Select the last 6 chosen activities 
+        for(let i=this.fullactivitieshistory.length-6;i<this.fullactivitieshistory.length;i++)
+        {
+          this.sixactivitieshistory.push(this.fullactivitieshistory[i]);
+        }
+        
+      })
   },
   methods: {
     logout() {
@@ -123,7 +168,8 @@ export default {
     },
     returnprofile() {
       this.$router.push('/userprofile')
-    }
+    },
+    
   }
 }
 </script>
