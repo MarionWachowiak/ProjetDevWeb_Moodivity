@@ -47,7 +47,7 @@
                         <br>
                         <div class="form-group">
                             <!-- Email address input-->
-                            Votre adresse e-mail : <input class="form-control" type="text" placeholder="Prénom *"  v-model="email" >
+                            Votre adresse e-mail : <input class="form-control" type="text" readonly="readonly" placeholder="Email *"  v-model="email" >
                             <br>
                         </div>
                         <br>
