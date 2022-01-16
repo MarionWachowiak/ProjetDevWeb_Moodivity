@@ -206,7 +206,7 @@ export default {
         for(let i=0 ; i < this.matchingactivities2.length ; i++)
         {
           //With type sport
-          if(this.matchingactivities2[i].type==='Sport' && this.sport==='Non')
+          if(this.matchingactivities2[i].type==='Sport' && this.sport==='Oui')
           {
             this.matchingactivities3.push(this.matchingactivities2[i]);
           }
