@@ -2,6 +2,7 @@
 
 # Sources for images : 
 - Main image (in the main page) : https://www.caf.fr/sites/default/files/cnaf/Vies%20de%20famille/RUB%20-%20Elever%20ses%20enfants/Acc%C3%A8s%20aux%20loisirs/vacances-a-la-maison_1.jpg
+- Pictograms of the home page : https://fontawesomeicons.com/
 - Images of the activities :
     - escalade : https://www.gap-escalade.com/images/actu/2017-18/guillestre1.png 
     - marché de Noël : http://sekisrasmi.ru/?www=Les+plus+beaux+march%C3%A9s+de+No%C3%ABl+de+France+en+2020 
