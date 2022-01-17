@@ -70,3 +70,4 @@
 - Use v-for to display elements : https://fr.vuejs.org/v2/guide/list.html
 - Reverse an array : https://thewebdev.info/2021/05/22/how-to-reverse-the-order-of-an-array-using-v-for-in-vue-js/
 - Remove the last element of an array : https://www.tutorialspoint.com/How-to-remove-last-array-element-in-JavaScript-and-return-it
+- Array randomisation : https://fr.code-paper.com/javascript/examples-randomize-an-array
