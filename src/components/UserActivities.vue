@@ -178,9 +178,10 @@ export default {
         this.activities = res.data.activities;
 
         //SELECTION OF THE ACTIVITIES TO BE PROPOSED
+
         for(let i=0 ; i < this.activities.length ; i++)
         {
-          //With mood
+          //MOOD
           if(this.activities[i].mood===this.mood1 || this.activities[i].mood===this.mood2 || this.activities[i].mood===this.mood3)
           {
             this.matchingactivities.push(this.activities[i]);
@@ -247,6 +248,10 @@ export default {
             this.matchingactivities3.push(this.matchingactivities2[i]);
           } 
         }
+
+        //PEOPLE NUMBER
+
+        //PLACE
 
         //Display 1 activity
         var a1 = Math.floor(Math.random() * this.matchingactivities3.length)
