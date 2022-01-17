@@ -136,6 +136,8 @@ export default {
       matchingactivities: [],
       matchingactivities2: [],
       matchingactivities3: [],
+      matchingactivities4: [],
+      matchingactivities5: [],
       //list with the selected activities
       selectedactivities: [],
     }
@@ -250,12 +252,40 @@ export default {
         }
 
         //PEOPLE NUMBER
+        for(let i=0 ; i < this.matchingactivities3.length ; i++)
+        {
+          //With 1 people
+          if(this.matchingactivities3[i].peopleNumber==1 && (this.activitypeople==='Seul' || this.activitypeople==='Les deux'))
+          {
+            this.matchingactivities4.push(this.matchingactivities3[i]);
+          }
+
+          //With more than 1 people
+          if(this.matchingactivities3[i].peopleNumber>1 && (this.activitypeople==='En groupe' || this.activitypeople==='Les deux'))
+          {
+            this.matchingactivities4.push(this.matchingactivities3[i]);
+          }
+        }
 
         //PLACE
+        for(let i=0 ; i < this.matchingactivities4.length ; i++)
+        {
+          //With indoor or both
+          if(this.matchingactivities4[i].place==='Intérieur' && (this.activityplace==='Intérieur' || this.activityplace==='Les deux'))
+          {
+            this.matchingactivities5.push(this.matchingactivities4[i]);
+          }
+
+          //With outdoor or both
+          if(this.matchingactivities4[i].place==='Extérieur' && (this.activitypeople==='Extérieur' || this.activitypeople==='Les deux'))
+          {
+            this.matchingactivities5.push(this.matchingactivities4[i]);
+          }
+        }
 
         //Display 1 activity
-        var a1 = Math.floor(Math.random() * this.matchingactivities3.length)
-        this.selectedactivities.push(this.matchingactivities3[a1]);
+        var a1 = Math.floor(Math.random() * this.matchingactivities5.length)
+        this.selectedactivities.push(this.matchingactivities5[a1]);
 
         localStorage.setItem("selectedactivity", this.selectedactivities[0].nameActivity);
 
