@@ -268,7 +268,6 @@ app.get('/activitieshistory', (req, res, next) => {
     if(decoded.userE!=null)
     {
       ActivitiesHistory.find({ email: decoded.userE }, (err, activitieshistory) => {
-        //console.log(activitieshistory);
         if (err) return console.log(err)
         return res.status(200).json({
           activitieshistory

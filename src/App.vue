@@ -4108,7 +4108,7 @@ textarea.form-control-lg {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  align-items: center;
+  align-items: center; 
 }
 
 .navbar-toggler {
@@ -11443,6 +11443,7 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+  width: 100%;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
