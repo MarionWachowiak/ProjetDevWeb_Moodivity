@@ -45,10 +45,7 @@ npm run build
 ```
 node server.js
 ```
-  
 
-### Reste à finir 
-  
 
 ### EN BONUS : 
 - Cas où l'utilisateur coche "non" à quasiment toutes les questions du personnalityquest  

@@ -60,6 +60,13 @@
     - journal : https://www.rtl.fr/culture/medias-people/la-confiance-des-francais-envers-les-medias-traditionnels-en-hausse-7791944525
     - camping : https://www.eurotunnel.com/fr/inspiration/camping-en-angleterre/
     - molkky : https://ecomobi.fr/offre-1262.html
+    - bain : https://focus-senior.fr/prendre-un-bain-avant-lheure-du-coucher-aiderait-a-mieux-dormir/
+    - restaurant : https://www.destinationdijon.com/restaurants/maison-philippe-le-bon-restaurant-la-closerie/
+    - galette : http://www.dessertsetconfitures.com/Recettes-des-Gateaux/Recette-de-Gateaux-traditionnels/Recette-Galette-des-rois-frangipane 
+    - diner chandelles : https://www.pinterest.fr/pin/513762269968237391/ 
+    - soin visage : https://www.carolyne.fr/meilleurs-masques-de-visage/
+    - regarder dessin animé : https://occ-0-3011-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABTDKEPszYIXxQEaoBa1ffd1zNAchHlkp8TF1uc1mSjLzc_fq-g4k3asRcFitA60_Jbr-Q_8-x9xVdN3c1Gy2eXKiALRf.jpg?r=ddf 
+    - pique nique : https://m1.quebecormedia.com/emp/rqc_prod/recettes_du_quebec-_-56b92908866a3930cfafd6bb834f91c376636e42-_-Pique-nique.jpg 
   
   
 # Sources for content : 
@@ -71,3 +78,4 @@
 - Reverse an array : https://thewebdev.info/2021/05/22/how-to-reverse-the-order-of-an-array-using-v-for-in-vue-js/
 - Remove the last element of an array : https://www.tutorialspoint.com/How-to-remove-last-array-element-in-JavaScript-and-return-it
 - Array randomisation : https://fr.code-paper.com/javascript/examples-randomize-an-array
+- Reload a page : https://developer.mozilla.org/fr/docs/Web/API/Location/reload 

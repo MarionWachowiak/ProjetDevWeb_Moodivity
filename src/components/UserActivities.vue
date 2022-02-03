@@ -315,7 +315,7 @@ export default {
       this.$router.push('/userprofile')
     },
     anotheractivity() {
-      this.$router.push('/useractivities')
+      location.reload();
     },
     chosenactivity() {
       let newActivitiesHistory = {
