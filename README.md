@@ -48,5 +48,4 @@ node server.js
 
 
 ### EN BONUS : 
-- Cas où l'utilisateur coche "non" à quasiment toutes les questions du personnalityquest  
 - Adresses des lieux des activités en fonction de la ville de l'user (API Google ?)
