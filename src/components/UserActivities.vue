@@ -283,9 +283,24 @@ export default {
           }
         }
 
+        //Case if there is no activity in the matchingactivities5
+        if(this.matchingactivities5.length<3)
+        {
+          //NEUTRAL ACTIVITIES
+          for(let i=0 ; i < this.activities.length ; i++)
+          {
+            if(this.activities[i].type==='Neutre' && this.matchingactivities5.length<5)
+            {
+              this.matchingactivities5.push(this.activities[i]);
+            }
+          }
+        }
+
         //Display 1 activity
         var a1 = Math.floor(Math.random() * this.matchingactivities5.length)
         this.selectedactivities.push(this.matchingactivities5[a1]);
+
+        alert(this.matchingactivities5.length)
 
         localStorage.setItem("selectedactivity", this.selectedactivities[0].nameActivity);
 
