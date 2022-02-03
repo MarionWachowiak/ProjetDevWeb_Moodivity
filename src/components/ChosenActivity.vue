@@ -152,20 +152,20 @@ export default {
 
         // Pop the last activity in the last : the chosen activity
         this.chosenactivity = this.fullactivitieshistory.pop();
-        
         // We currently have the last activities chosen : if the user is a new one, he/she doesn't have 6 previous chosen activities...
-        if(this.fullactivitieshistory<6)
+        if(this.fullactivitieshistory.length<6)
         {
           // Select the last chosen activities
-          for(let i=this.fullactivitieshistory.length-6;i<this.fullactivitieshistory.length;i++)
+          for(let i=0;i<this.fullactivitieshistory.length;i++)
           {
             this.sixactivitieshistory.push(this.fullactivitieshistory[i]);
           }
+          
         }
         else
         {
           // Select the last 6 chosen activities
-          for(let i=0;i<this.fullactivitieshistory.length;i++)
+          for(let i=this.fullactivitieshistory.length-6;i<this.fullactivitieshistory.length;i++)
           {
             this.sixactivitieshistory.push(this.fullactivitieshistory[i]);
           }
