@@ -22,11 +22,18 @@ utilisateurs, activités, humeur.
 - Vue.js pour la partie front
   
     
-### To run locally : 
-* Install MongoDBCompass  
-* Importer la base de données activités : fichier activities.json
+## To run locally : 
+  
+## Install MongoDBCompass + MongoDB Database Tools
+  
+## Download database's archive
 
-## Project setup
+## Import moodivity database
+```
+mongorestore -d moodivity <path to database>
+```
+
+### Project setup
 ```
 npm install
 ```

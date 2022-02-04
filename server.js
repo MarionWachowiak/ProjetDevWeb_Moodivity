@@ -10,7 +10,9 @@ const Activity = require('./models/Activity');
 const ActivitiesHistory = require('./models/ActivitiesHistory');
 //const req = require('express/lib/request');
 
+//Connection to the mongodb database
 mongoose.connect('mongodb://localhost/moodivity');
+
 
 const app = express();
 app.use(cors());

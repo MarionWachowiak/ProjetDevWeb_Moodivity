@@ -300,8 +300,6 @@ export default {
         var a1 = Math.floor(Math.random() * this.matchingactivities5.length)
         this.selectedactivities.push(this.matchingactivities5[a1]);
 
-        alert(this.matchingactivities5.length)
-
         localStorage.setItem("selectedactivity", this.selectedactivities[0].nameActivity);
 
         /** 
