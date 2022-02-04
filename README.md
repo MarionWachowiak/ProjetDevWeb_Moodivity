@@ -24,11 +24,11 @@ utilisateurs, activités, humeur.
     
 ## To run locally : 
   
-## Install MongoDBCompass + MongoDB Database Tools
+### Install MongoDBCompass + MongoDB Database Tools
   
-## Download database's archive
+### Download database's archive
 
-## Import moodivity database
+### Import moodivity database
 ```
 mongorestore -d moodivity <path to database>
 ```
