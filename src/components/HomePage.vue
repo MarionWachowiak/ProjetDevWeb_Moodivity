@@ -154,7 +154,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="../assets/img/team/marion.jpg" alt="..." />
+                        <img class="mx-auto rounded-circle" src="../assets/img/team/marion.jpg" alt="marion" />
                         <h4>Marion WACHOWIAK</h4>
                         <p class="text-muted">Developer</p>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/marionwachowiak/"><i class="fab fa-linkedin-in"></i></a>
