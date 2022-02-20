@@ -52,7 +52,3 @@ npm run build
 ```
 node server.js
 ```
-
-
-### EN BONUS : 
-- Adresses des lieux des activités en fonction de la ville de l'user (API Google ?)

@@ -82,7 +82,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Comment ça fonctionne ?</h2>
-                <h3 class="section-subheading text-muted">Rien de plus simple, suivez les étapes suivnates :</h3>
+                <h3 class="section-subheading text-muted">Rien de plus simple, suivez les étapes suivantes :</h3>
             </div>
             <ul class="timeline">
                 <li>
